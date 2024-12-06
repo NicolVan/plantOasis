@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+@{
+    Layout = null;
+    string linkUrl = "";
+
+    // Debugging output - skontroluj, čo obsahuje model
+    <p>Model obsahuje redirectUrl: @Model.HasValue("redirectUrl")</p>
+
+    if (Model.HasValue("redirectUrl"))
+    {
+        linkUrl = Model.Value("redirectUrl").ToString();
+    }
+
+    // Tlač hodnotu redirectUrl, aby si zistil, či je správna
+    <p>Redirect URL: @linkUrl</p>
+
+    if (!string.IsNullOrEmpty(linkUrl))
+    {
+        Response.Redirect(linkUrl);
+    }
+}

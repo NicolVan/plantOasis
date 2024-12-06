@@ -1,0 +1,10 @@
+﻿@using PlantOasis.lib.Models
+@model BasketModel
+@{
+    Model.QuoteDetailUrl = Url.Content("~/home/zakaznicka-sekcia/moje-objednavky/detail-objednavky");
+}
+
+@Html.Partial("Quote/QuoteDetailStep", Model)
+@Html.Partial("Quote/QuoteDetailHeader", Model.CurrentQuote)
+@Html.Partial("Quote/QuoteDetail", Model.CurrentQuote)
+@Html.Partial("Quote/QuoteDetailStep", Model)

@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\PlantOasis",
+    "\\PlantOasis\\App_Plugins",
+    "\\PlantOasis\\App_Plugins\\PlantOasis",
+    "\\PlantOasis\\App_Plugins\\PlantOasis\\Views",
+    "\\PlantOasis\\App_Plugins\\PlantOasis\\Views\\Availability",
+    "\\PlantOasis\\App_Plugins\\PlantOasis\\Views\\CustomerData",
+    "\\PlantOasis\\Views",
+    "\\PlantOasis\\Views\\MacroPartials",
+    "\\PlantOasis\\Views\\Partials",
+    "\\PlantOasis\\Views\\Partials\\PlantOasisEshop"
+  ],
+  "SelectedNode": "\\PlantOasis.lib\\Controller\\DodavatelController.cs",
+  "PreviewInSolutionExplorer": false
+}

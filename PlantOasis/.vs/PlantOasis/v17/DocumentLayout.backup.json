@@ -1,0 +1,203 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BF701B7B-ACE4-4D30-9A66-6E4C2000828D}|PlantOasis\\PlantOasis.csproj|c:\\users\\nikol\\source\\repos\\plantoasis\\plantoasis\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{BF701B7B-ACE4-4D30-9A66-6E4C2000828D}|PlantOasis\\PlantOasis.csproj|solutionrelative:plantoasis\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|PlantOasis||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF701B7B-ACE4-4D30-9A66-6E4C2000828D}|PlantOasis\\PlantOasis.csproj|C:\\Users\\nikol\\source\\repos\\PlantOasis\\plantoasis\\app_plugins\\plantoasis\\views\\customeradmin\\confirmdeleterecord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF701B7B-ACE4-4D30-9A66-6E4C2000828D}|PlantOasis\\PlantOasis.csproj|solutionrelative:plantoasis\\app_plugins\\plantoasis\\views\\customeradmin\\confirmdeleterecord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84A13DE0-9E1C-49DD-AFB4-B11D55BC86BD}|PlantOasis.lib\\PlantOasis.lib.csproj|C:\\Users\\nikol\\source\\repos\\PlantOasis\\plantoasis.lib\\controller\\customerdatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84A13DE0-9E1C-49DD-AFB4-B11D55BC86BD}|PlantOasis.lib\\PlantOasis.lib.csproj|solutionrelative:plantoasis.lib\\controller\\customerdatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84A13DE0-9E1C-49DD-AFB4-B11D55BC86BD}|PlantOasis.lib\\PlantOasis.lib.csproj|C:\\Users\\nikol\\source\\repos\\PlantOasis\\plantoasis.lib\\controller\\customeradmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84A13DE0-9E1C-49DD-AFB4-B11D55BC86BD}|PlantOasis.lib\\PlantOasis.lib.csproj|solutionrelative:plantoasis.lib\\controller\\customeradmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF701B7B-ACE4-4D30-9A66-6E4C2000828D}|PlantOasis\\PlantOasis.csproj|C:\\Users\\nikol\\source\\repos\\PlantOasis\\plantoasis\\app_plugins\\plantoasis\\views\\shared\\categorypublic\\categorydetailmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF701B7B-ACE4-4D30-9A66-6E4C2000828D}|PlantOasis\\PlantOasis.csproj|solutionrelative:plantoasis\\app_plugins\\plantoasis\\views\\shared\\categorypublic\\categorydetailmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF701B7B-ACE4-4D30-9A66-6E4C2000828D}|PlantOasis\\PlantOasis.csproj|C:\\Users\\nikol\\source\\repos\\PlantOasis\\plantoasis\\app_plugins\\plantoasis\\views\\categorypublic\\homecategorybanners.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF701B7B-ACE4-4D30-9A66-6E4C2000828D}|PlantOasis\\PlantOasis.csproj|solutionrelative:plantoasis\\app_plugins\\plantoasis\\views\\categorypublic\\homecategorybanners.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF701B7B-ACE4-4D30-9A66-6E4C2000828D}|PlantOasis\\PlantOasis.csproj|C:\\Users\\nikol\\source\\repos\\PlantOasis\\plantoasis\\app_plugins\\plantoasis\\views\\categorypublic\\promotedcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF701B7B-ACE4-4D30-9A66-6E4C2000828D}|PlantOasis\\PlantOasis.csproj|solutionrelative:plantoasis\\app_plugins\\plantoasis\\views\\categorypublic\\promotedcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF701B7B-ACE4-4D30-9A66-6E4C2000828D}|PlantOasis\\PlantOasis.csproj|C:\\Users\\nikol\\source\\repos\\PlantOasis\\plantoasis\\app_plugins\\plantoasis\\views\\categorypublic\\categorydetailproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF701B7B-ACE4-4D30-9A66-6E4C2000828D}|PlantOasis\\PlantOasis.csproj|solutionrelative:plantoasis\\app_plugins\\plantoasis\\views\\categorypublic\\categorydetailproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF701B7B-ACE4-4D30-9A66-6E4C2000828D}|PlantOasis\\PlantOasis.csproj|C:\\Users\\nikol\\source\\repos\\PlantOasis\\plantoasis\\app_plugins\\plantoasis\\views\\categorypublic\\categorydetailheader.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF701B7B-ACE4-4D30-9A66-6E4C2000828D}|PlantOasis\\PlantOasis.csproj|solutionrelative:plantoasis\\app_plugins\\plantoasis\\views\\categorypublic\\categorydetailheader.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF701B7B-ACE4-4D30-9A66-6E4C2000828D}|PlantOasis\\PlantOasis.csproj|C:\\Users\\nikol\\source\\repos\\PlantOasis\\plantoasis\\app_plugins\\plantoasis\\views\\categorypublic\\categorydetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF701B7B-ACE4-4D30-9A66-6E4C2000828D}|PlantOasis\\PlantOasis.csproj|solutionrelative:plantoasis\\app_plugins\\plantoasis\\views\\categorypublic\\categorydetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF701B7B-ACE4-4D30-9A66-6E4C2000828D}|PlantOasis\\PlantOasis.csproj|c:\\users\\nikol\\source\\repos\\plantoasis\\plantoasis\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis\\Web.config",
+              "RelativeDocumentMoniker": "PlantOasis\\Web.config",
+              "ToolTip": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis\\Web.config",
+              "RelativeToolTip": "PlantOasis\\Web.config",
+              "ViewState": "AgIAAAABAAAAAAAAAADwvx0BAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-11-12T10:05:46.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlantOasis",
+              "DocumentMoniker": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis\\PlantOasis.csproj",
+              "RelativeDocumentMoniker": "PlantOasis\\PlantOasis.csproj",
+              "ToolTip": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis\\PlantOasis.csproj",
+              "RelativeToolTip": "PlantOasis\\PlantOasis.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-12T09:19:55.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomerDataController.cs",
+              "DocumentMoniker": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis.lib\\Controller\\CustomerDataController.cs",
+              "RelativeDocumentMoniker": "PlantOasis.lib\\Controller\\CustomerDataController.cs",
+              "ToolTip": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis.lib\\Controller\\CustomerDataController.cs",
+              "RelativeToolTip": "PlantOasis.lib\\Controller\\CustomerDataController.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAcwBUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T09:04:13.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerAdminController.cs",
+              "DocumentMoniker": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis.lib\\Controller\\CustomerAdminController.cs",
+              "RelativeDocumentMoniker": "PlantOasis.lib\\Controller\\CustomerAdminController.cs",
+              "ToolTip": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis.lib\\Controller\\CustomerAdminController.cs",
+              "RelativeToolTip": "PlantOasis.lib\\Controller\\CustomerAdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T09:03:20.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ConfirmDeleteRecord.cshtml",
+              "DocumentMoniker": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis\\App_Plugins\\PlantOasis\\Views\\CustomerAdmin\\ConfirmDeleteRecord.cshtml",
+              "RelativeDocumentMoniker": "PlantOasis\\App_Plugins\\PlantOasis\\Views\\CustomerAdmin\\ConfirmDeleteRecord.cshtml",
+              "ToolTip": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis\\App_Plugins\\PlantOasis\\Views\\CustomerAdmin\\ConfirmDeleteRecord.cshtml",
+              "RelativeToolTip": "PlantOasis\\App_Plugins\\PlantOasis\\Views\\CustomerAdmin\\ConfirmDeleteRecord.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-11T09:02:01.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CategoryDetailMenu.cshtml",
+              "DocumentMoniker": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis\\App_Plugins\\PlantOasis\\Views\\Shared\\CategoryPublic\\CategoryDetailMenu.cshtml",
+              "RelativeDocumentMoniker": "PlantOasis\\App_Plugins\\PlantOasis\\Views\\Shared\\CategoryPublic\\CategoryDetailMenu.cshtml",
+              "ToolTip": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis\\App_Plugins\\PlantOasis\\Views\\Shared\\CategoryPublic\\CategoryDetailMenu.cshtml",
+              "RelativeToolTip": "PlantOasis\\App_Plugins\\PlantOasis\\Views\\Shared\\CategoryPublic\\CategoryDetailMenu.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvx8AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-11T08:46:42.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomeCategoryBanners.cshtml",
+              "DocumentMoniker": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis\\App_Plugins\\PlantOasis\\Views\\CategoryPublic\\HomeCategoryBanners.cshtml",
+              "RelativeDocumentMoniker": "PlantOasis\\App_Plugins\\PlantOasis\\Views\\CategoryPublic\\HomeCategoryBanners.cshtml",
+              "ToolTip": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis\\App_Plugins\\PlantOasis\\Views\\CategoryPublic\\HomeCategoryBanners.cshtml",
+              "RelativeToolTip": "PlantOasis\\App_Plugins\\PlantOasis\\Views\\CategoryPublic\\HomeCategoryBanners.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvxgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-11T08:45:41.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PromotedCategory.cshtml",
+              "DocumentMoniker": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis\\App_Plugins\\PlantOasis\\Views\\CategoryPublic\\PromotedCategory.cshtml",
+              "RelativeDocumentMoniker": "PlantOasis\\App_Plugins\\PlantOasis\\Views\\CategoryPublic\\PromotedCategory.cshtml",
+              "ToolTip": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis\\App_Plugins\\PlantOasis\\Views\\CategoryPublic\\PromotedCategory.cshtml",
+              "RelativeToolTip": "PlantOasis\\App_Plugins\\PlantOasis\\Views\\CategoryPublic\\PromotedCategory.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-11T08:45:39.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CategoryDetailProducts.cshtml",
+              "DocumentMoniker": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis\\App_Plugins\\PlantOasis\\Views\\CategoryPublic\\CategoryDetailProducts.cshtml",
+              "RelativeDocumentMoniker": "PlantOasis\\App_Plugins\\PlantOasis\\Views\\CategoryPublic\\CategoryDetailProducts.cshtml",
+              "ToolTip": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis\\App_Plugins\\PlantOasis\\Views\\CategoryPublic\\CategoryDetailProducts.cshtml",
+              "RelativeToolTip": "PlantOasis\\App_Plugins\\PlantOasis\\Views\\CategoryPublic\\CategoryDetailProducts.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-11T08:44:50.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CategoryDetailHeader.cshtml",
+              "DocumentMoniker": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis\\App_Plugins\\PlantOasis\\Views\\CategoryPublic\\CategoryDetailHeader.cshtml",
+              "RelativeDocumentMoniker": "PlantOasis\\App_Plugins\\PlantOasis\\Views\\CategoryPublic\\CategoryDetailHeader.cshtml",
+              "ToolTip": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis\\App_Plugins\\PlantOasis\\Views\\CategoryPublic\\CategoryDetailHeader.cshtml",
+              "RelativeToolTip": "PlantOasis\\App_Plugins\\PlantOasis\\Views\\CategoryPublic\\CategoryDetailHeader.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-11T08:44:44.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CategoryDetail.cshtml",
+              "DocumentMoniker": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis\\App_Plugins\\PlantOasis\\Views\\CategoryPublic\\CategoryDetail.cshtml",
+              "RelativeDocumentMoniker": "PlantOasis\\App_Plugins\\PlantOasis\\Views\\CategoryPublic\\CategoryDetail.cshtml",
+              "ToolTip": "C:\\Users\\nikol\\source\\repos\\PlantOasis\\PlantOasis\\App_Plugins\\PlantOasis\\Views\\CategoryPublic\\CategoryDetail.cshtml",
+              "RelativeToolTip": "PlantOasis\\App_Plugins\\PlantOasis\\Views\\CategoryPublic\\CategoryDetail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-11T08:44:37.815Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
