@@ -7,7 +7,7 @@
     string urlDelete = Url.Content("~/home/zakaznicka-sekcia/dostupnost-produktov/odstranit");
 }
 
-<h1>DOSTUPNOSTI PRODUKTOV</h1>
+<h1>DOSTUPNOSŤ PRODUKTOV</h1>
 @{
     var grid = new WebGrid(null, rowsPerPage: Model.ItemsPerPage, defaultSort: "AvailabilityName");
     grid.Bind(Model.Items, rowCount: Model.TotalItems, autoSortAndPage: false);

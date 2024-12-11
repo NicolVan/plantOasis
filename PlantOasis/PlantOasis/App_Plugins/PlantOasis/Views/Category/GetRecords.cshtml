@@ -4,10 +4,10 @@
 @model CategoryModel
 
 @{
-    string urlInsert = string.Format("{0}?id={1}", Url.Content("~/home/zakaznicka-sekcia/kategorie/pridat"), Model.pk.ToString());
-    string urlUpdate = Url.Content("~/home/zakaznicka-sekcia/kategorie/upravit");
-    string urlDelete = Url.Content("~/home/zakaznicka-sekcia/kategorie/odstranit");
-    string urlChildren = Url.Content("~/home/zakaznicka-sekcia/kategorie");
+    string urlInsert = string.Format("{0}?id={1}", Url.Content("~/sk/zakaznicka-sekcia/kategorie/pridat"), Model.pk.ToString());
+    string urlUpdate = Url.Content("~/sk/zakaznicka-sekcia/kategorie/upravit");
+    string urlDelete = Url.Content("~/sk/zakaznicka-sekcia/kategorie/odstranit");
+    string urlChildren = Url.Content("~/sk/zakaznicka-sekcia/kategorie");
     string urlSubcateg = string.Format("{0}?id={1}&tab={2}", urlChildren, Model.pk.ToString(), _BaseCategoryController.ReturnToTabVal_Subcateg);
     string urlProdInCat = string.Format("{0}?id={1}&tab={2}", urlChildren, Model.pk.ToString(), _BaseCategoryController.ReturnToTabVal_ProdInCat);
     string urlProdNotInCat = string.Format("{0}?id={1}&tab={2}", urlChildren, Model.pk.ToString(), _BaseCategoryController.ReturnToTabVal_ProdNotInCat);
