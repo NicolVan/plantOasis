@@ -5,7 +5,7 @@
     using (Html.BeginUmbracoForm<PlantOasis.lib.Controller.MemberController>("SaveRecord", null, new { @class = "form-horizontal", role = "form" }))
     {
         @Html.AntiForgeryToken()
-        <div class="plantoasis-form">
+        <div class="PlantOasis-form">
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-item-hidden">
@@ -72,7 +72,7 @@
             <div class="row new-section">
                 <div class="col-md-12">
                     <a href="#" onclick="document.getElementById('submitButton').click(); return false;" class="btn btn-default btn-lg">Zapísať</a>
-                    <a href="@Url.Content(string.Format("~/home/zakaznicka-sekcia/{0}", Model.IsCustomerEdit == PlantOasis.lib.Util.ParamUtil.IsCustomerEdit ? "zakaznici" : "uzivatelia"))" class="btn btn-default btn-lg">Späť</a>
+                    <a href="@Url.Content(string.Format("~/zakaznicka-sekcia/{0}", Model.IsCustomerEdit == PlantOasis.lib.Util.ParamUtil.IsCustomerEdit ? "zakaznici" : "uzivatelia"))" class="btn btn-default btn-lg">Späť</a>
                     <input type="submit" id="submitButton" class="hidden" />
                 </div>
             </div>
