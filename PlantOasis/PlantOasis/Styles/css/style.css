@@ -301,7 +301,9 @@ p strong {
     font-family: 'Antic Slab', serif;
     color:#0e470f;
 }
-
+div strong {
+    color: #0e470f;
+}
 h2 {
     font-family: "Lora", serif;
     font-size: 1.6rem;

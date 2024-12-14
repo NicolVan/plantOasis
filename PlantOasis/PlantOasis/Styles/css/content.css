@@ -179,12 +179,12 @@ h1, h2, h3, h4, h4 {
 .header-contact .contact-item img {
     max-width: 40px;
 }
-.header-contact .contact-item a {
-    color: #726539;
-    font-weight: 500;
-    padding-left: 5px;
-    font-size: 16px;
-}
+    .header-contact .contact-item a {
+        color: #39956b;
+        font-weight: 500;
+        padding-left: 5px;
+        font-size: 16px;
+    }
 
 .header-contact .quick-links {
     text-align: center;
@@ -223,18 +223,18 @@ h1, h2, h3, h4, h4 {
 .header-contact .quick-links .quick-item.light {
     left: 210px;
 }
-.header-contact .quick-links .quick-item.dark a {
-    background-color: #726539;
-    color: #FFF;
-}
+    .header-contact .quick-links .quick-item.dark a {
+        background-color: #39956b;
+        color: #FFF;
+    }
 .header-contact .quick-links .quick-item.dark a:hover {
     background-color: #5D522E;
     color: #FFF;
 }
-.header-contact .quick-links .quick-item.light a {
-    background-color: #FFF3D5;
-    color: #726539;
-}
+    .header-contact .quick-links .quick-item.light a {
+        background-color: #FFF3D5;
+        color: #39956b;
+    }
 .header-contact .quick-links .quick-item.light a:hover {
     background-color: #5D522E;
     color: #FFF;
@@ -260,19 +260,19 @@ h1, h2, h3, h4, h4 {
     margin: auto;
     position: relative;
 }
-.header-search .search-icon {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50px;
-    height: 40px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    background-color: #726539;
-    padding-top: 2px;
-    padding-left: 5px;
-}
+    .header-search .search-icon {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50px;
+        height: 40px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color: #39956b;
+        padding-top: 2px;
+        padding-left: 5px;
+    }
 .header-search .search-icon:hover {
     background-color: #5D522E;
 }
@@ -326,10 +326,10 @@ h1, h2, h3, h4, h4 {
     padding-left: 10px;
 }
 .header.mobile-only .contact-item a {
-   color: #726539;
-   font-size: 13px;
-   font-weight: bold;
-   padding-left: 5px;
+    color: #39956b;
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 5px;
 }
 .header.mobile-only .contact-item img {
     max-width: 20px;
@@ -570,7 +570,7 @@ h1, h2, h3, h4, h4 {
         height: 50px;
         text-align: center;
         border: 2px solid #FFF;
-        background: #726539;
+        background: #39956b;
         color: #FFF;
         text-decoration: none;
         position: fixed;
@@ -1009,7 +1009,7 @@ h1, h2, h3, h4, h4 {
     }
 
         .trade-rules a:hover {
-            color: #726539;
+            color: #39956b;
             text-decoration: underline;
         }
 

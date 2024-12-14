@@ -53,6 +53,8 @@ namespace PlantOasis.lib.Util
         public const string PropId_ProductAttributeFilterModel = "PropId_ProductAttributeFilterModel";
         public const string PropId_QuoteListFilterModel = "PropId_QuoteListFilterModel";
 
+        public const string PlantOasis_Quote_InitialState = "plantoasis.Quote.InitialState";
+        public const string PlantOasis_Quote_PaidPriceState = "plantoasis.Quote.PaidPriceState";
         public const string PlantOasis_Basket_DeliveryDataPageId = "plantoasis.Basket_DeliveryDataPageId";
         public const string PlantOasis_Basket_ReviewAndSendPageId = "plantoasis.Basket_ReviewAndSendPageId";
         public const string PlantOasis_Basket_FinishedPageId = "plantoasis.Basket_FinishedPageId";
@@ -62,7 +64,10 @@ namespace PlantOasis.lib.Util
         {
             return int.Parse(ConfigurationManager.AppSettings[pageKey]);
         }
-
+        public static string PaiedQuotePriceState()
+        {
+            return ConfigurationManager.AppSettings[ConfigurationUtil.PlantOasis_Quote_PaidPriceState];
+        }
         public static string GetCfgValue(string cfgKey)
         {
             return ConfigurationManager.AppSettings[cfgKey];

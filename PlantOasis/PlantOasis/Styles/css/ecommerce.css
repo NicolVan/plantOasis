@@ -131,7 +131,7 @@ table.webgrid tr.paging td{font-weight: bold; }
 table.webgrid tr.paging td a{padding: 5px;}
 table.webgrid tr th span.tools {white-space: nowrap;}
 table.webgrid tr th span.tools input[type="checkbox"]{margin-right: 10px;}
-table.webgrid tr td span.tools a { color: #726539;}
+table.webgrid tr td span.tools a { color: #39956b;}
 table.webgrid tr.new-date-row {
     border-top: 5px solid rgba(17, 125, 191, 0.2); 
     background-color: rgba(17, 125, 191, 0.2);
@@ -218,9 +218,9 @@ table.webgrid img.grid-img {
 .related-products .related-product .name {
     padding-left: 10px;
 }
-.related-products .related-product a {
-    color: #726539;
-}
+    .related-products .related-product a {
+        color: #39956b;
+    }
 .related-products-title {
     margin-top: 20px;
     font-weight: bold;
@@ -328,8 +328,8 @@ table.webgrid img.grid-img {
         display: block;
         padding: 2px 0;
         text-decoration: none;
-        background-color: #726539;
-        border: 2px solid #726539;
+        background-color: #39956b;
+        border: 2px solid #39956b;
         color: #FFF;
         text-align: center;
         font-size: 12px;
@@ -362,8 +362,8 @@ table.webgrid img.grid-img {
     margin-right: -15px;
     padding: 0;
     background-color: #e5d3a5;
-    border-top: 1px solid #726539;
-    border-bottom: 1px solid #726539;
+    border-top: 1px solid #39956b;
+    border-bottom: 1px solid #39956b;
     text-align: center;
     margin-bottom: 10px;
 }
@@ -387,8 +387,8 @@ table.webgrid img.grid-img {
 }
 .ec-category-main-menu ul li a.active {
     background-color: #FFF;
-    border-left: 1px solid #726539;
-    border-right: 1px solid #726539;
+    border-left: 1px solid #39956b;
+    border-right: 1px solid #39956b;
 }
 .ec-category-main-menu ul li a.active:after {
     position: absolute;
@@ -408,7 +408,7 @@ table.webgrid img.grid-img {
     background-color: #2d633e;
 }
 .ec-category-main-menu ul li span {
-    color: #726539;
+    color: #39956b;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -768,7 +768,7 @@ table.webgrid img.grid-img {
 }
 .product-list .product-item .name {
     font-weight: bold;
-    color: #726539;
+    color: #39956b;
 }
 .product-list .product-list-list .product-item a .name:hover {
     color: #5D522E;
@@ -1089,7 +1089,12 @@ table.webgrid img.grid-img {
     }
     
 }
-
+.logo1 {
+    max-width: 90px; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 
 /* Quote info */
 .quote-info {
@@ -1100,85 +1105,100 @@ table.webgrid img.grid-img {
     top: 100px;
     padding: 0 20px;
 }
+
 .quote-info-msg {
     display: none;
 }
+
 .quote-modal {
     width: 60%;
 }
-.quote-modal .modal-header {
-    border: none;
-}
-.quote-modal, .quote-modal .modal-content {
-    background-color: #e5d3a5;
-    color: #726539;
-    text-align: center;
-    border: none;
-    border-radius: 0;
-    padding: 20px 0;
-    box-shadow: none;
-}
-.quote-modal .modal-content .title {
-    font-weight: bold;
-    font-size: 18px;
-    padding: 10px 0;
-}
-.quote-modal .modal-content .product-name {
-    padding: 10px 0;
-    margin: 10px 0 30px 0;
-}
-.quote-modal .modal-content .free-transport {
-    padding: 10px;
-    display: inline-block;
-    margin: 10px 0;
-    background-color: #FFF;
-    color: #726539;
-    font-weight: bold;
-    letter-spacing: -1px;
-}
-.quote-modal .modal-content .buttons {
-    padding: 10px 0;
-    margin-top: 10px;
-}
-.quote-modal .modal-content .buttons a {
-    padding: 10px 20px;
-    color: #FFF;
-    border: 1px solid #726539;
-    background-color: #726539;
-    text-decoration: none;
-    margin: 0 5px;
-    display: inline-block;
-    white-space: nowrap;
-}
-.quote-modal .modal-content .buttons a.primary {
-    color: #726539;
-    background-color: #FFF;
-    border-color: #FFF;
-}
-.quote-modal .modal-content .buttons a.selected {
-    border-width: 5px;
-}
-.quote-modal .modal-content .buttons a:hover {
-    color: #FFF;
-    background-color: #5D522E;
-    border-color: #5D522E;
-    text-decoration: none;
-}
+
+    .quote-modal .modal-header {
+        border: none;
+    }
+
+    .quote-modal, .quote-modal .modal-content {
+        background-color: #f9f9f9;
+        color: #39956b;
+        text-align: center;
+        border: none;
+        border-radius: 0;
+        padding: 20px 0;
+        box-shadow: none;
+    }
+
+        .quote-modal .modal-content .title {
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px 0;
+        }
+
+        .quote-modal .modal-content .product-name {
+            padding: 10px 0;
+            margin: 10px 0 30px 0;
+        }
+
+        .quote-modal .modal-content .free-transport {
+            padding: 10px;
+            display: inline-block;
+            margin: 10px 0;
+            background-color: #FFF;
+            color: #39956b;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+
+        .quote-modal .modal-content .buttons {
+            padding: 10px 0;
+            margin-top: 10px;
+        }
+
+            .quote-modal .modal-content .buttons a {
+                padding: 10px 20px;
+                color: #FFF;
+                border: 1px solid #39956b;
+                background-color: #39956b;
+                text-decoration: none;
+                margin: 0 5px;
+                display: inline-block;
+                white-space: nowrap;
+            }
+
+                .quote-modal .modal-content .buttons a.primary {
+                    color: #39956b;
+                    background-color: #FFF;
+                    border-color: #FFF;
+                }
+
+                .quote-modal .modal-content .buttons a.selected {
+                    border-width: 5px;
+                }
+
+                .quote-modal .modal-content .buttons a:hover {
+                    color: #FFF;
+                    background-color: #39956b;
+                    border-color: #39956b;
+                    text-decoration: none;
+                }
+
 @media(min-width: 768px) {
     .quote-modal .modal-content .buttons a {
         width: 270px;
     }
 }
+
 @media(max-width: 767px) {
     .quote-modal {
         width: calc(100% - 20px);
     }
-    .quote-modal .modal-content .buttons a {
-        padding: 10px;
-        display: block;
-        white-space: nowrap;
-        margin-bottom: 10px;
-    }
+
+        .quote-modal .modal-content .buttons a {
+            padding: 10px;
+            display: block;
+            white-space: nowrap;
+            margin-bottom: 10px;
+        }
 }
 
 .cert-vert {
@@ -1245,7 +1265,7 @@ table.webgrid img.grid-img {
     text-decoration: none;
 }
 .basket-product-item .product-img .btn-remove:hover {
-    color: #726539;
+    color: #39956b;
     font-weight: bold;
     text-decoration: none;
 }
@@ -1266,10 +1286,10 @@ table.webgrid img.grid-img {
 .basket-product-item .product-pcs {
     text-align: center;
     white-space: nowrap;
-    color: #726539;
+    color: #39956b;
 }
 .basket-product-item .product-pcs a {
-    color: #726539;
+    color: #39956b;
     font-weight: bold;
     text-decoration: none;
     padding: 0 5px;
@@ -1784,7 +1804,7 @@ img.img-product-detail {
     color: #FFF;
 }
 .step-buttons a:hover .step-btn {
-    color: #726539;
+    color: #39956b;
     background-color: #FFF;
 }
 .step-buttons .step-txt {
