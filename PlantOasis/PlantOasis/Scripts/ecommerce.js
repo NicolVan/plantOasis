@@ -898,7 +898,7 @@ function ecSubmitBasketDeliveryData(submitBtnId, transportGroupName, transportIn
 }
 
 /* Grid pager */
-function naplnspajzuTogglePageNbInput_CategoryDetailProductsPager(el) {
+function plantoasisogglePageNbInput_CategoryDetailProductsPager(el) {
     var self = $(el);
     var pageNb = self.next();
     if (pageNb.hasClass('hidden')) {
@@ -909,7 +909,7 @@ function naplnspajzuTogglePageNbInput_CategoryDetailProductsPager(el) {
         pageNb.addClass('hidden');
     }
 }
-function naplnspajzuLoadPageNb_CategoryDetailProductsPager(el, replacePgNb) {
+function plantoasisLoadPageNb_CategoryDetailProductsPager(el, replacePgNb) {
     var self = $(el);
     var pgnb = self.prev().val();
     var href = self.attr('href').replace(replacePgNb, pgnb);
@@ -919,7 +919,7 @@ function naplnspajzuLoadPageNb_CategoryDetailProductsPager(el, replacePgNb) {
 /* Admin quote state edit */
 var quoteAdminGetRecords_CurrentQuoteStateLink;
 
-function naplnspajzuQuoteStateChange(el) {
+function plantoasisQuoteStateChange(el) {
     quoteAdminGetRecords_CurrentQuoteStateLink = $(el);
 
     $('#modalQuoteStateChangeId_QuoteId').html(quoteAdminGetRecords_CurrentQuoteStateLink.data('quoteid'));
@@ -938,7 +938,7 @@ function naplnspajzuQuoteStateChange(el) {
 
     ecModalShow('modalQuoteStateChangeId');
 }
-function naplnspajzuQuoteSetState(el) {
+function plantoasisQuoteSetState(el) {
     var quoteId = quoteAdminGetRecords_CurrentQuoteStateLink.data('quotepk');
     var quoteState = $(el).data('statekey');
 
@@ -1024,9 +1024,9 @@ function ecInitProductSearchUI(url) {
             ecProductSearchOpen();
             return false;
         });
-        if ($.cookie("naplnspajzu_productsearch_open") == '1') {
+        if ($.cookie("plantoasis_productsearch_open") == '1') {
             // set cookie to not open search control after next page reload
-            $.cookie("naplnspajzu_productsearch_open", '0', { expires: 40000, path: '/' });
+            $.cookie("plantoasis_productsearch_open", '0', { expires: 40000, path: '/' });
             // open search control now
             ecProductSearchOpen();
         }
@@ -1035,7 +1035,7 @@ function ecInitProductSearchUI(url) {
         $('a.menu-item-search').on('click', function () {
             console.log("Search menu item clicked");
             // set cookie to open search control after next page reload
-            $.cookie("naplnspajzu_productsearch_open", '1', { expires: 40000, path: '/' });
+            $.cookie("plantoasis_productsearch_open", '1', { expires: 40000, path: '/' });
             return true;
         });
     }

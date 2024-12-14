@@ -37,7 +37,7 @@ namespace PlantOasis.lib.Controller
         //        return this.RedirectToCurrentUmbracoUrl();
         //    }
 
-        //    return this.RedirectToNaplnspajzuUmbracoPage(ConfigurationUtil.Ecommerce_ProductPublic_SearchPageId, string.Format("srchprod={0}", model.ProductToSearch));
+        //    return this.RedirectToplantoasisUmbracoPage(ConfigurationUtil.Ecommerce_ProductPublic_SearchPageId, string.Format("srchprod={0}", model.ProductToSearch));
         //}
         //[HttpPost]
         //public ActionResult ProductGlobalSearch(string productToGlobalSearch)
@@ -48,7 +48,7 @@ namespace PlantOasis.lib.Controller
         //        return this.RedirectToCurrentUmbracoUrl();
         //    }
 
-        //    return this.RedirectToNaplnspajzuUmbracoPage(ConfigurationUtil.Ecommerce_ProductPublic_SearchPageId, string.Format("srchprod={0}", productToGlobalSearch));
+        //    return this.RedirectToplantoasisUmbracoPage(ConfigurationUtil.Ecommerce_ProductPublic_SearchPageId, string.Format("srchprod={0}", productToGlobalSearch));
         //}
     }
 }

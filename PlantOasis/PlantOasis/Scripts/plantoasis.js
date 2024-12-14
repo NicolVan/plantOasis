@@ -1,16 +1,16 @@
 ﻿$(document).ready(function () {
     // Contact
-    naplnspajzuContactFormApi();
+    plantoasisContactFormApi();
     // Menu bar
-    naplnspajzuMenuScrollTrigger();
+    plantoasisMenuScrollTrigger();
     // Cookies
-    if ($.cookie("naplnspajzu_cookies_ok") != '1') {
+    if ($.cookie("plantoasis_cookies_ok") != '1') {
         $('.cookies-div').show();
     }
 });
 
 /* contact */
-function naplnspajzuContactFormApi() {
+function plantoasisContactFormApi() {
     if ($('.api-password-group').length > 0) {
         $.ajax('/Umbraco/PlantOasis/PlantOasisApi/ContactFormApiKey',
             {
@@ -24,7 +24,7 @@ function naplnspajzuContactFormApi() {
 }
 
 /* Menu bar */
-function naplnspajzuMenuScrollTrigger() {
+function plantoasisMenuScrollTrigger() {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
             $('.menu-bar').addClass('fixed');
@@ -36,16 +36,16 @@ function naplnspajzuMenuScrollTrigger() {
 }
 
 /* cookies */
-function naplnspajzuCookiesOk() {
-    $.cookie("naplnspajzu_cookies_ok", '1', { expires: 40000, path: '/' });
-    naplnspajzuCookiesClose();
+function plantoasisCookiesOk() {
+    $.cookie("plantoasis_cookies_ok", '1', { expires: 40000, path: '/' });
+    plantoasisCookiesClose();
 }
-function naplnspajzuCookiesClose() {
+function plantoasisCookiesClose() {
     $('.cookies-div').hide();
 }
 
 /* slider */
-function naplnspajzuSlider() {
+function plantoasisSlider() {
     var slideCount = $('.slider ul li').length;
     var slideWidth = $('.slider ul li').width();
     var slideHeight = $('.slider ul li').height();

@@ -18,7 +18,7 @@
                     {
                         if (pager.Name == "...")
                         {
-                            <a href="#" onclick="naplnspajzuTogglePageNbInput_CategoryDetailProductsPager(this); return false;">
+                            <a href="#" onclick="plantoasisogglePageNbInput_CategoryDetailProductsPager(this); return false;">
                                 <span class="pager-link">
                                     @pager.Name
                                 </span>
@@ -26,7 +26,7 @@
                             <span class="page-nb-input hidden">
                                 <label>Zadajte číslo strany</label>
                                 <input class="form-item" />
-                                <a href="@pager.TemplateUrl" onclick="naplnspajzuLoadPageNb_CategoryDetailProductsPager(this, '@GridPagerModel.DefaultReplacePageNb'); return true;">ZOBRAZIŤ</a>
+                                <a href="@pager.TemplateUrl" onclick="plantoasisLoadPageNb_CategoryDetailProductsPager(this, '@GridPagerModel.DefaultReplacePageNb'); return true;">ZOBRAZIŤ</a>
                             </span>
                         }
                         else

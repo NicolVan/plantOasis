@@ -245,12 +245,12 @@ namespace PlantOasis.lib.Controller
                 //TransportType dhlTransport = new TransportTypeRepository().GetForGatewayType((int)TransportGateway.GatewayType.GT_DHL);
                 //if (model.TransportTypeKey == dhlTransport.pk)
                 //{
-                //    return this.RedirectToNaplnspajzuUmbracoPage(ConfigurationUtil.Ecommerce_Basket_Gateway_DhlParcelShopPageId);
+                //    return this.RedirectToplantoasisUmbracoPage(ConfigurationUtil.Ecommerce_Basket_Gateway_DhlParcelShopPageId);
                 //}
                 //TransportType spsTransport = new TransportTypeRepository().GetForGatewayType((int)TransportGateway.GatewayType.GT_SPS);
                 //if (model.TransportTypeKey == spsTransport.pk)
                 //{
-                //    return this.RedirectToNaplnspajzuUmbracoPage(ConfigurationUtil.Ecommerce_Basket_Gateway_SpsParcelShopPageId);
+                //    return this.RedirectToplantoasisUmbracoPage(ConfigurationUtil.Ecommerce_Basket_Gateway_SpsParcelShopPageId);
                 //}
                 //else
                 {
@@ -329,15 +329,15 @@ namespace PlantOasis.lib.Controller
 
             //if (isCardPayment)
             //{
-            //    return this.RedirectToNaplnspajzuUmbracoPage(ConfigurationUtil.Ecommerce_Basket_CardPayPageId, string.Format("id={0}", quoteModel.pk.ToString()));
+            //    return this.RedirectToplantoasisUmbracoPage(ConfigurationUtil.Ecommerce_Basket_CardPayPageId, string.Format("id={0}", quoteModel.pk.ToString()));
             //}
             //if (isSporopayPayment)
             //{
-            //    return this.RedirectToNaplnspajzuUmbracoPage(ConfigurationUtil.Ecommerce_Basket_SporopayPageId, string.Format("id={0}", quoteModel.pk.ToString()));
+            //    return this.RedirectToplantoasisUmbracoPage(ConfigurationUtil.Ecommerce_Basket_SporopayPageId, string.Format("id={0}", quoteModel.pk.ToString()));
             //}
             //if (isVubeplatbyPayment)
             //{
-            //    return this.RedirectToNaplnspajzuUmbracoPage(ConfigurationUtil.Ecommerce_Basket_VubeplatbyPageId, string.Format("id={0}", quoteModel.pk.ToString()));
+            //    return this.RedirectToplantoasisUmbracoPage(ConfigurationUtil.Ecommerce_Basket_VubeplatbyPageId, string.Format("id={0}", quoteModel.pk.ToString()));
             //}
 
             return this.RedirectToUmbracoPage(ConfigurationUtil.PlantOasis_Basket_FinishedPageId);

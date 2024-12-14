@@ -21,7 +21,7 @@ namespace PlantOasis.lib.Task
             public string ImgPath { get; private set; }
 
             public QuoteModel Quote { get; private set; }
-            public SysConstModel Naplnspajzu { get; private set; }
+            public SysConstModel plantoasis { get; private set; }
 
             public QuoteData(Guid quoteKey, string imgPath) : this(QuoteModel.GetCompleteModel(quoteKey), imgPath)
             {
@@ -30,7 +30,7 @@ namespace PlantOasis.lib.Task
             {
                 this.ImgPath = imgPath;
                 this.Quote = quote;
-                this.Naplnspajzu = SysConstModel.CreateCopyFrom(new SysConstRepository().Get());
+                this.plantoasis = SysConstModel.CreateCopyFrom(new SysConstRepository().Get());
             }
         }
 
@@ -182,27 +182,27 @@ namespace PlantOasis.lib.Task
                 y = 115;
                 pdf.WriteTextAtPosition(widthMargin + widthPadding, y, new PdfTextItem("Dodavatel", PdfFonts.F_BOLD_8));
                 float lineHeight = 13;
-                pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(StringUtil.RemoveDiacritics(quoteData.Naplnspajzu.CompanyName), PdfFonts.F_NORMAL_10));
-                pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(StringUtil.RemoveDiacritics(quoteData.Naplnspajzu.AddressStreet), PdfFonts.F_NORMAL_10));
-                pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(string.Format("{0} {1}", quoteData.Naplnspajzu.AddressZip, StringUtil.RemoveDiacritics(quoteData.Naplnspajzu.AddressCity)), PdfFonts.F_NORMAL_10));
+                pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(StringUtil.RemoveDiacritics(quoteData.plantoasis.CompanyName), PdfFonts.F_NORMAL_10));
+                pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(StringUtil.RemoveDiacritics(quoteData.plantoasis.AddressStreet), PdfFonts.F_NORMAL_10));
+                pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(string.Format("{0} {1}", quoteData.plantoasis.AddressZip, StringUtil.RemoveDiacritics(quoteData.plantoasis.AddressCity)), PdfFonts.F_NORMAL_10));
                 y += lineHeight; // empty line
                 //pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(quoteData.LmData.AddressCountry, PdfFonts.F_NORMAL_10));
-                pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(string.Format("ICO: {0}", quoteData.Naplnspajzu.CompanyIco), PdfFonts.F_NORMAL_10));
-                pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(string.Format("DIC: {0}", quoteData.Naplnspajzu.CompanyDic), PdfFonts.F_NORMAL_10));
-                if (!string.IsNullOrEmpty(quoteData.Naplnspajzu.CompanyIcdph))
+                pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(string.Format("ICO: {0}", quoteData.plantoasis.CompanyIco), PdfFonts.F_NORMAL_10));
+                pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(string.Format("DIC: {0}", quoteData.plantoasis.CompanyDic), PdfFonts.F_NORMAL_10));
+                if (!string.IsNullOrEmpty(quoteData.plantoasis.CompanyIcdph))
                 {
-                    pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(string.Format("IC DPH: {0}", quoteData.Naplnspajzu.CompanyIcdph), PdfFonts.F_NORMAL_10));
+                    pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(string.Format("IC DPH: {0}", quoteData.plantoasis.CompanyIcdph), PdfFonts.F_NORMAL_10));
                 }
                 y += lineHeight; // empty line
-                pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(string.Format("E-mail: {0}", quoteData.Naplnspajzu.Email), PdfFonts.F_NORMAL_10));
-                pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(string.Format("Telefon: {0}", quoteData.Naplnspajzu.Phone), PdfFonts.F_NORMAL_10));
+                pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(string.Format("E-mail: {0}", quoteData.plantoasis.Email), PdfFonts.F_NORMAL_10));
+                pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(string.Format("Telefon: {0}", quoteData.plantoasis.Phone), PdfFonts.F_NORMAL_10));
                 //pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(string.Format("{0}", quoteData.LmData.CompanyRegister), PdfFonts.F_NORMAL_10));
                 y += lineHeight; // empty line
                 y += lineHeight; // empty line
                 pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(string.Format("Variabilny symbol: {0}", quoteData.Quote.QuoteId), PdfFonts.F_NORMAL_10));
-                pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(string.Format("IBAN: {0}", quoteData.Naplnspajzu.Iban), PdfFonts.F_NORMAL_10));
-                //pdf.WriteTextAtPosition(x, y += lineHeight, new PdfTextItem(quoteData.Naplnspajzu.Swift, PdfFonts.F_NORMAL_11));
-                pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(string.Format("Banka: {0}", StringUtil.RemoveDiacritics(quoteData.Naplnspajzu.Bank)), PdfFonts.F_NORMAL_10));
+                pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(string.Format("IBAN: {0}", quoteData.plantoasis.Iban), PdfFonts.F_NORMAL_10));
+                //pdf.WriteTextAtPosition(x, y += lineHeight, new PdfTextItem(quoteData.plantoasis.Swift, PdfFonts.F_NORMAL_11));
+                pdf.WriteTextAtPosition(widthMargin + widthPadding, y += lineHeight, new PdfTextItem(string.Format("Banka: {0}", StringUtil.RemoveDiacritics(quoteData.plantoasis.Bank)), PdfFonts.F_NORMAL_10));
 
                 y = 115;
                 pdf.WriteTextAtPosition(pdf.PageWidthCenter + widthPadding, y, new PdfTextItem("Odberatel:", PdfFonts.F_BOLD_8));

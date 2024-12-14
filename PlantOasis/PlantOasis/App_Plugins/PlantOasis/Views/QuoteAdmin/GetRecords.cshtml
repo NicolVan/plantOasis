@@ -37,7 +37,7 @@
                         grid.Column("QuotePrice", "Cena", canSort: true, format: a => a.QuotePriceWithVatView),
                         grid.Column("QuoteState", "Stav objednávky", canSort: true, format: a =>
                             Html.Raw(
-                            "<a href='#' class='nowrap' onclick='naplnspajzuQuoteStateChange(this); return false;' data-quotepk='" + a.pk.ToString() + "' data-quoteid='" + a.QuoteId + "' data-quotedate='" + a.DateFinishedView + "' data-quoteprice='" + a.QuotePriceWithVatView + "'>" + a.QuoteState + "</a>"
+                            "<a href='#' class='nowrap' onclick='plantoasisQuoteStateChange(this); return false;' data-quotepk='" + a.pk.ToString() + "' data-quoteid='" + a.QuoteId + "' data-quotedate='" + a.DateFinishedView + "' data-quoteprice='" + a.QuotePriceWithVatView + "'>" + a.QuoteState + "</a>"
                             )),
                         grid.Column("InvCity", "Obec", canSort: true),
                         grid.Column("InvName", "Meno", canSort: true),
@@ -66,7 +66,7 @@
                 @foreach (CmpDropDownItem item in ddStates)
                 {
                     <div>
-                        <a class="btn-quote-state" href="#" onclick="naplnspajzuQuoteSetState(this); return false;" data-statekey="@item.DataKey">@item.Name</a>
+                        <a class="btn-quote-state" href="#" onclick="plantoasisQuoteSetState(this); return false;" data-statekey="@item.DataKey">@item.Name</a>
                     </div>
                 }
             </div>
