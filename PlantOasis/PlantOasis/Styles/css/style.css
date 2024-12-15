@@ -301,9 +301,7 @@ p strong {
     font-family: 'Antic Slab', serif;
     color:#0e470f;
 }
-div strong {
-    color: #0e470f;
-}
+
 h2 {
     font-family: "Lora", serif;
     font-size: 1.6rem;
@@ -840,8 +838,7 @@ p {
 }
 .navbar {
     overflow: hidden;
-    position: fixed; 
-    top: 0; 
+
     width: 100%; 
 }
 
@@ -1105,7 +1102,7 @@ p {
 
 @media (max-width: 767px) {
     .cookies-div {
-        top: 20px;
+        top:150px;
         right: 20px;
         width: calc(100% - 40px);
     }

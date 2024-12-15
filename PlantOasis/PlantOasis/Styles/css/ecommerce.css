@@ -109,7 +109,7 @@
     font-size: 12px;
 }
 .login-form .links a:hover {
-    color: #5D522E;
+    color: #39956b;
 }
 .login-form .submit {
     text-align: right;
@@ -336,7 +336,7 @@ table.webgrid img.grid-img {
     }
     .navbar-category a:hover {
         text-decoration: none;
-        background-color: #5D522E;
+        background-color: #39956b;
         cursor: pointer;
         color: #FFF;
     }
@@ -771,7 +771,7 @@ table.webgrid img.grid-img {
     color: #39956b;
 }
 .product-list .product-list-list .product-item a .name:hover {
-    color: #5D522E;
+    color: #39956b;
     font-size: 20px;
 }
 .product-list .product-item .text {
@@ -1239,7 +1239,7 @@ table.webgrid img.grid-img {
         padding: 0 2px;
     }
 .basket-product-item .tools a:hover {
-    color: #5D522E;
+    color: #39956b;
     text-decoration: none;
 }
 @media(max-width: 767px) {
@@ -1295,7 +1295,7 @@ table.webgrid img.grid-img {
     padding: 0 5px;
 }
 .basket-product-item .product-pcs a:hover {
-    color: #5D522E;
+    color: #39956b;
     font-weight: normal;
     text-decoration: none;
 }

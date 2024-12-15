@@ -106,7 +106,7 @@ h1, h2, h3, h4, h4 {
         letter-spacing: -1px;
     }
 .header-login a:hover {
-    color: #5D522E;
+    color: #39956b;
     text-decoration: none;
 }
     .header-login .login-separator {
@@ -228,15 +228,15 @@ h1, h2, h3, h4, h4 {
         color: #FFF;
     }
 .header-contact .quick-links .quick-item.dark a:hover {
-    background-color: #5D522E;
+    background-color: #39956b;
     color: #FFF;
 }
     .header-contact .quick-links .quick-item.light a {
-        background-color: #FFF3D5;
+        background-color: #69dba7;
         color: #39956b;
     }
 .header-contact .quick-links .quick-item.light a:hover {
-    background-color: #5D522E;
+    background-color: #39956b;
     color: #FFF;
 }
 @media(max-width: 767px) {
@@ -274,7 +274,7 @@ h1, h2, h3, h4, h4 {
         padding-left: 5px;
     }
 .header-search .search-icon:hover {
-    background-color: #5D522E;
+    background-color: #39956b;
 }
 .header-search .search-icon img {
     height: 35px;
@@ -285,15 +285,15 @@ h1, h2, h3, h4, h4 {
     top: 0;
     width: 350px;
     height: 40px;
-    background-color: #FFF3D5;
+    background-color: #69dba7;
 }
 .header-search .search-input input {
     width: 350px;
     height: 40px;
     margin: 0;
     padding: 5px 10px;
-    background-color: #FFF3D5;
-    color: #5D522E;
+    background-color: #69dba7;
+    color: #39956b;
     border: none;
 }
 .header-search .search-end {
@@ -302,7 +302,7 @@ h1, h2, h3, h4, h4 {
     top: 0;
     width: 20px;
     height: 40px;
-    background-color: #FFF3D5;
+    background-color: #69dba7;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -485,7 +485,7 @@ h1, h2, h3, h4, h4 {
     text-decoration: none;
 }
 .footer ul.menu li a:hover {
-    color: #FFF3D5;
+    color: #69dba7;
     text-decoration: none;
 }
 .footer .content-social a {
@@ -493,7 +493,7 @@ h1, h2, h3, h4, h4 {
     font-size: 30px;
 }
 .footer .content-social a:hover {
-    color: #FFF3D5;
+    color: #69dba7;
 }
 .footer .copy-bar {
     text-align: center;
@@ -502,19 +502,19 @@ h1, h2, h3, h4, h4 {
 .footer .copyright {
     text-align: center;
     margin-top: 20px;
-    color: #FFF3D5;
+    color: #69dba7;
 }
 .footer .copyright a {
     text-decoration: none;
-    color: #FFF3D5;
+    color: #69dba7;
 }
 .footer .developer {
     text-align: center;
-    color: #FFF3D5;
+    color: #69dba7;
 }
 .footer .developer a {
     text-decoration: none;
-    color: #FFF3D5;
+    color: #69dba7;
     font-size: 14px;
 }
 .footer .developer a:hover {
@@ -551,7 +551,7 @@ h1, h2, h3, h4, h4 {
     }
 
     .info-bar {
-        background-color: #FFF3D5;
+        background-color: #69dba7;
         color: #2E5511;
         font-weight: 500;
         font-size: 18px;
@@ -583,7 +583,7 @@ h1, h2, h3, h4, h4 {
 
         .scrollToTop:hover {
             color: #FFF;
-            background: #5D522E;
+            background: #39956b;
         }
 
     .home-cta .headlineuvod p {
@@ -682,7 +682,7 @@ h1, h2, h3, h4, h4 {
         }
 
         .plantoasis-form .form-item label a:hover {
-            color: #5D522E;
+            color: #39956b;
             text-decoration: underline;
         }
 
@@ -691,7 +691,7 @@ h1, h2, h3, h4, h4 {
     }
 
     .plantoasis-form .title {
-        color: #5D522E;
+        color: #39956b;
         font-weight: bold;
         font-size: 16px;
         padding: 30px 0;
@@ -754,7 +754,7 @@ h1, h2, h3, h4, h4 {
 
             .user-logged-in a:hover {
                 color: #FFF;
-                background-color: #5D522E;
+                background-color: #39956b;
                 text-decoration: none;
             }
 
