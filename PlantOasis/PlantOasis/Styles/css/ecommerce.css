@@ -943,7 +943,7 @@ table.webgrid img.grid-img {
         padding-top:200px;
     }
     .home-stred img {
-        max-width: 250px;
+        max-width: 480px;
         max-height: 100%;
         margin-left:0px;
         margin-bottom:200px;
@@ -1079,9 +1079,9 @@ table.webgrid img.grid-img {
         width: calc(720vw + 40px);
     }
     .product-list-img .promoted-list-img .col-md-3 {
-        width: 90vw;
+        width: 400px;;
         display: inline-block;
-        padding: 0 15px;
+        padding: 0 30px;
         margin: 0;
     }
     .product-list-promo-title {

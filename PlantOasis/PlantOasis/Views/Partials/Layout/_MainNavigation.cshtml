@@ -86,3 +86,23 @@
       </div>
 </nav>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const caretButtons = document.querySelectorAll('.mobile-submenu-caret');
+
+    caretButtons.forEach(button => {
+        button.addEventListener('click', function (e) {
+            e.preventDefault(); 
+
+            const submenuId = this.getAttribute('href').substring(1);
+            const submenu = document.getElementById(submenuId);
+
+            if (submenu.classList.contains('show')) {
+                submenu.classList.remove('show'); 
+            } else {
+                submenu.classList.add('show'); 
+            }
+        });
+    });
+});
+</script>

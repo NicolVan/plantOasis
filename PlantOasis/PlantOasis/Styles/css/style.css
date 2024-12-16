@@ -85,7 +85,6 @@ ul {
     }
     .product {
         height: 450px;
-        max-width: 190px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         margin-bottom: 10px;
     }
@@ -818,11 +817,6 @@ p {
     margin-left: 5px;
 }
 
-@media screen and (max-width: 600px) {
-    .mobile-only {
-        display: block; 
-    }
-}
  .headlineuvod {
     font-size: 8rem;
     text-align: center;
@@ -833,8 +827,14 @@ p {
         display: none;
     }
 }
-.home-slider{
-    padding-top:100px;
+@media (max-width: 768px) {
+    .home-slider {
+        background-image: url('/media/w0qg3tra/nature-3808354_1280-3.jpg'); 
+    }
+
+    .headlineuvod {
+        font-size: 3.5rem;
+    }
 }
 .navbar {
     overflow: hidden;
