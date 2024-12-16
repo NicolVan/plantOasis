@@ -1,0 +1,17 @@
+﻿@inherits UmbracoViewPage
+<!DOCTYPE html>
+<html lang="en">
+@Html.Partial("Layout/_HtmlHead")
+<body>
+    @Html.Partial("Layout/_Header")
+    <div class="page-body">
+        @RenderBody()
+    </div>
+    @Html.Partial("Layout/_Footer")
+    @Html.Partial("Layout/_Cookies")
+    @Html.Partial("Eshop/_InfoMessages")
+    <a href="#" class="scrollToTop"><i class="fa fa-caret-up"></i></a>
+</body>
+
+@Html.Partial("Layout/_HtmlScripts")
+</html>

@@ -1,0 +1,80 @@
+﻿@inherits UmbracoViewPage
+@using PlantOasis.lib.Models
+@using PlantOasis.lib.Repositories
+@{
+    MembershipUser user = System.Web.Security.Membership.GetUser();
+    bool addSeparator = false;
+}
+
+
+@if (user != null)
+{
+    <div class="protected-menubar">
+        <nav class="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-protected" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="title">@user.UserName</div>
+        </nav>
+        <div id="navbar-protected" class="collapse navbar-collapse">
+            <div class="menu">
+                @if (System.Web.Security.Roles.IsUserInRole(user.UserName, MemberRepository.PlantOasisMemberAdminRole))
+                {
+                        <ul class="admin-menu">
+                            <li><a href="@Url.Content("~/umbraco")">Správa obsahu webu</a></li>
+                            <li><a href="@Url.Content("~/home/zakaznicka-sekcia/nastavenia")">Nastavenia</a></li>
+                            <li><a href="@Url.Content("~/home/zakaznicka-sekcia/krajiny")">Krajiny</a></li>
+
+                            <li><a href="@Url.Content("~/home/zakaznicka-sekcia/sposoby-dopravy")">Spôsoby dopravy</a></li>
+                            <li><a href="@Url.Content("~/home/zakaznicka-sekcia/sposoby-platby")">Spôsoby platby</a></li>
+                            <li><a href="@Url.Content("~/home/zakaznicka-sekcia/stavy-objednavky")">Stavy objednávky</a></li>
+                            <li><a href="@Url.Content("~/home/zakaznicka-sekcia/stavy-uhrady")">Stavy úhrady</a></li>
+                            <li><a href="@Url.Content("~/home/zakaznicka-sekcia/dostupnost-produktov")">Dostupnosť produktov</a></li>
+                            <li><a href="@Url.Content("~/home/zakaznicka-sekcia/vlastnosti-produktov")">Vlastnosti produktov</a></li>
+                        </ul>
+                        <div class="separator"></div>
+                        <ul class="admin-menu">
+                            <li><a href="@Url.Content("~/home/zakaznicka-sekcia/uzivatelia")">Užívatelia</a></li>
+                            <li><a href="@Url.Content("~/home/zakaznicka-sekcia/zakaznici")">Zákazníci</a></li>
+                        </ul>
+                    <div class="separator"></div>
+                    <ul class="admin-menu">
+                        <li><a href="@Url.Content("~/home/zakaznicka-sekcia/dodavatelia")">Dodávatelia</a></li>
+                        <li><a href="@Url.Content("~/home/zakaznicka-sekcia/produkty")">Produkty</a></li>
+                        <li><a href="@Url.Content("~/home/zakaznicka-sekcia/kategorie")">Kategórie</a></li>
+                    </ul>
+                    <div class="separator"></div>
+                    <ul class="admin-menu">
+                        <li><a href="@Url.Content("~/home/zakaznicka-sekcia/objednavky")">Objednávky</a></li>
+                    </ul>
+                    addSeparator = true;
+                }
+                @if (System.Web.Security.Roles.IsUserInRole(user.UserName, MemberRepository.PlantOasisMemberCustomerRole))
+                {
+                    if (addSeparator)
+                    {
+                        <div class="separator"></div>
+                    }
+                    <ul class="customer-menu">
+                        <li><a href="@Url.Content("~/home/zakaznicka-sekcia/moje-heslo")">Zmena hesla</a></li>
+                        <li><a href="@Url.Content("~/home/zakaznicka-sekcia/moje-osobne-udaje")">Moje osobné údaje</a></li>
+                        <li><a href="@Url.Content("~/home/zakaznicka-sekcia/moje-objednavky")">Moje objednávky</a></li>
+                    </ul>
+                }
+
+            </div>
+            @using (Html.BeginUmbracoForm<PlantOasis.lib.Controller.MemberController>("Logout", null, new { @class = "form-horizontal", role = "form" }))
+            {
+                <div class="logout-btn">
+                    <a href="#" onclick="document.getElementById('submitProtectedLogoutButton').click(); return false;">ODHLÁSIŤ</a>
+                    <input type="submit" id="submitProtectedLogoutButton" class="hidden" />
+                </div>
+            }
+        </div>
+    </div>
+}
+
+

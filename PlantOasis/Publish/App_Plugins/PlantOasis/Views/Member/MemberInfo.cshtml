@@ -1,0 +1,12 @@
+@{
+    var myUser = System.Web.Security.Membership.GetUser();
+    if (myUser != null)
+    {
+        <p>
+            @myUser.UserName
+        </p>
+        <p>
+            <a href="@Url.Action("Logout", "Member",new { are = "PlantOasis"})" class="btn btn-primary btn-lg">Odhlasit</a>
+        </p>
+    }
+}

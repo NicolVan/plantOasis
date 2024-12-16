@@ -1,0 +1,29 @@
+﻿@inherits _PlantOasisViewPage
+
+@using PlantOasis.lib.Models
+@using PlantOasis.lib.Models.UmbracoCmsContent
+@using PlantOasis.lib.Repositories.UmbracoCmsContent
+@using PlantOasis.lib.Util
+
+@{
+    Texty texty = TextyRepository.GetFromUmbraco(Umbraco);
+    MembershipUser user = Umbraco.MemberIsLoggedOn() ? System.Web.Security.Membership.GetUser() : null;
+    _EshopModel eshop = this.GetCurrentEshopModel();
+}
+
+<header class="header desktop-only">
+    <nav class="top-bar">
+        <div class="container-fluid">
+
+        </div>
+    </nav>
+</header>
+<header class="header mobile-only">
+    <div class="top-bar">
+        <div class="container-fluid">
+
+        </div>
+    </div>
+</header>
+
+@Html.Partial("Layout/_MainNavigation", new MainNavigationModel() { User = user, Eshop = eshop })

@@ -1,0 +1,131 @@
+﻿
+.eshop-menu {
+    background-color: white;
+}
+
+.form-item-hidden {
+    display: none;
+}
+
+.tab-content {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+    margin-bottom: 20px;
+}
+
+    .img-grid-container div {
+        margin: 5px;
+        width: 120px;
+        height: 120px;
+        display: block;
+        float: left;
+        position: relative;
+        text-align: center;
+    }
+
+    .img-grid-container span {
+        font-size: 10px;
+    }
+
+    .img-grid-container img {
+        border: 5px solid #DDDDDD;
+        margin: auto;
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+        .img-grid-container img.selected {
+            border: 5px solid #008CBA;
+        }
+
+.img-grid-loader {
+    display: none;
+}
+
+.img-model-div img.img-model {
+    border: 5px solid #DDDDDD;
+    cursor: pointer;
+}
+
+.img-select-div {
+    margin-bottom: 20px;
+}
+
+.sidebar-menu {
+    width: 250px;
+    background-color: #f8f9fa; 
+    padding: 15px;
+}
+
+.category-menu {
+    list-style: none;
+    padding: 0;
+}
+
+    .category-menu li {
+        margin-bottom: 10px;
+    }
+
+    .category-menu .category-toggle {
+        background: none;
+        border: none;
+        color: #39956b;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: left;
+        width: 100%;
+    }
+/* Slider */
+.slider {
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto 0 auto;
+}
+
+    .slider ul {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: block;
+    }
+
+        .slider ul li {
+            position: relative;
+            display: block;
+            float: left;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+    .slider a.control_prev, .slider a.control_next {
+        position: absolute;
+        top: 40%;
+        z-index: 999;
+        display: block;
+        padding: 4% 3%;
+        width: auto;
+        height: auto;
+        color: #000;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+        .slider a.control_prev:hover, .slider a.control_next:hover {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+    .slider a.control_prev {
+        border-radius: 0 2px 2px 0;
+    }
+
+    .slider a.control_next {
+        right: 0;
+        border-radius: 2px 0 0 2px;
+    }
+

@@ -1,0 +1,29 @@
+﻿@inherits UmbracoViewPage
+@using PlantOasis.lib.Controller
+@{ 
+    string sessionId = new _BaseControllerUtil().CurrentSessionId;
+}
+<div>
+    Obsah kosika: <span class="header-basket-pcs"></span>, <span class="header-basket-price"></span>
+</div>
+
+<script>
+    $(document).ready(function () {
+        obsahKosika();
+    });
+
+    function obsahKosika() {
+        var param = '@sessionId';
+        $.ajax('/Umbraco/PlantOasis/QuoteApi/BasketInfo?id=' + param,
+            {
+            type: 'POST',
+            success: function (data) {
+                $('.header-basket-pcs').html(data.Pocet);
+                $('.header-basket-price').html(data.Cena);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert('Error: ' + textStatus);
+            }
+        });
+    }
+</script>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="en" intName="English" localName="English" culture="en-US">
+	<area alias="Views/ContactForm">
+		<key alias="Správu sa nepodarilo odoslať. Opravte chyby a skúste správu odoslať znovu.">"The message could not be sent. Correct the errors and try sending the message again."</key>
+	</area>
+</language>

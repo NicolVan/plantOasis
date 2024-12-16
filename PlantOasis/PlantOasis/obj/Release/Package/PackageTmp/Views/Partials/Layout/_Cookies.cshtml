@@ -1,0 +1,44 @@
+﻿<div class="cookies-div">
+    <div class="cookies-close" onclick="plantoasisCookiesClose();"><img src="@Url.Content("~/Styles/images/icon-close.png")" /></div>
+    <p>
+        Tieto stránky využívajú cookies.
+        Ich ďalším používaním súhlasíte s využívaním cookies.
+        Prečítajte si informácie o tom, ako cookies používame a ako ich používanie môžete odmietnuť
+        nastavením svojho internetového prehliadača.
+    </p>
+    <div class="clearfix">
+        <a href="#" onclick="plantoasisCookiesOk(); return false;" class="cookies-ok">SÚHLASÍM</a>
+        <a href="#" onclick="plantoasisCookiesClose(); return false;" class="cookies-cancel">ODMIETNUŤ</a>
+    </div>
+    <div class="privacy-links">
+        <a href="@Url.Content("~/home/gdpr/")" target="_blank">GDPR</a>
+        <a href="@Url.Content("~/home/cookies/")" target="_blank">INFORMÁCIE O COOKIES</a>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        if ($.cookie("plantoasis_cookies_ok") !== '1') {
+            $('.cookies-div').show(); 
+        }
+    });
+
+    function plantoasisCookiesOk() {
+        $.cookie("plantoasis_cookies_ok", '1', { expires: 365, path: '/' }); 
+        plantoasisCookiesClose();
+    }
+
+    function plantoasisCookiesClose() {
+        $('.cookies-div').hide(); 
+    }
+
+    $('.cookies-ok').click(function (e) {
+        e.preventDefault();
+        plantoasisCookiesOk(); 
+    });
+
+    $('.cookies-cancel').click(function (e) {
+        e.preventDefault();
+        plantoasisCookiesClose(); 
+    });
+
+</script>
