@@ -108,7 +108,7 @@ namespace PlantOasis.lib.Task
                 // Kontaktné informácie
                 pdf.CenterTextAtPosition(110, new PdfTextItem("Objednávku si spravíte jednoducho telefonicky,", PdfFonts.F_NORMAL_11));
                 pdf.CenterTextAtPosition(125, new PdfTextItem("ale aj cez SMS, email alebo online na eshope.", PdfFonts.F_NORMAL_11));
-                pdf.CenterTextAtPosition(150, new PdfTextItem(string.Format("{0}      {1}      www.plantoasis.sk", this.DataModel.PlantOasis.Phone, this.DataModel.PlantOasis.Email), PdfFonts.F_BOLD_11));
+                pdf.CenterTextAtPosition(150, new PdfTextItem(string.Format("{0}      {1}      www.plant-oasis.sk", this.DataModel.PlantOasis.Phone, this.DataModel.PlantOasis.Email), PdfFonts.F_BOLD_11));
 
                 // Dodatočný text
                 pdf.CenterParagraphAtRectangle(20, headImgHeight + headImgHeight2 / 2f, pdf.PageWidth - 40, headImgHeight2 / 2f, new PdfTextItem(this.DataModel.HeadInfoMsg, PdfFonts.F_NORMAL_11));
@@ -134,7 +134,7 @@ namespace PlantOasis.lib.Task
             headImgWith = pdf.PageWidth;
             headImgHeight = headImgRatio * headImgWith;
             pdf.ChangeDrawColor(pdf.Fonts.PrimaryColor);
-            pdf.CenterTextAtPosition(pdf.PageHeight - 30f, new PdfTextItem("... viac informácií na www.plantoasis.sk", PdfFonts.F_BOLD_10));
+            pdf.CenterTextAtPosition(pdf.PageHeight - 30f, new PdfTextItem("... viac informácií na www.plant-oasis.sk", PdfFonts.F_BOLD_10));
 
             return y + 20; 
         }

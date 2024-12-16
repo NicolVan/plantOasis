@@ -108,7 +108,7 @@ namespace PlantOasis.lib.Task
 
             pdf.DrawHorizontalLine(left, y + 3, pdf.PageWidth - 2 * (widthMargin + widthPadding));
 
-            pdf.CenterTextAtPosition(820, new PdfTextItem("PlantOasis.sk", PdfFonts.F_NORMAL_6));
+            pdf.CenterTextAtPosition(820, new PdfTextItem("plant-oasis.sk", PdfFonts.F_NORMAL_6));
 
             return y + lineHeight;
         }

@@ -273,7 +273,7 @@ namespace PlantOasis.lib.Controller
                 Guid quoteKey = quoteRep.GetQuoteIdForSessionId(id);
                 if (quoteKey != null && quoteKey != Guid.Empty)
                 {
-                    // Don't show price in basket info for plantoasis.sk 
+                    // Don't show price in basket info for plant-oasis.sk 
                     //Quote quote = quoteRep.Get(quoteKey);
                     //priceNoVat = quote.QuotePriceNoVat;
                     //priceWithVat = quote.QuotePriceWithVat;

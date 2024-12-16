@@ -168,7 +168,7 @@ namespace PlantOasis.lib.Controller
                 };
 
                         Mailer.SendMailTemplateWithoutBcc(
-                            "Obnovenie prístupu na plantoasis.sk",
+                            "Obnovenie prístupu na plant-oasis.sk",
                             TextTemplate.GetTemplateText("LostPassword_Sk", paramList),
                             member.Email
                         );

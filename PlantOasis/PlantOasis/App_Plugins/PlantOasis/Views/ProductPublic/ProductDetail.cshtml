@@ -24,7 +24,7 @@ else
     if (Model.ProductCategory != null)
     {
     <div class="breadcrumbs">
-        <a href="@Url.Content("~/")">plantoasis.sk</a>
+        <a href="@Url.Content("~/")">plant-oasis.sk</a>
         @if (Model.ProductCategory.Parents != null)
         {
             if (Model.ProductCategory.Parents.Count > 0)
@@ -47,7 +47,7 @@ else
     else
     {
     <div class="breadcrumbs">
-        <a href="@Url.Content("~/")">PlantOasis.sk</a>
+        <a href="@Url.Content("~/")"plant-oasis.sk</a>
         @HtmlUtil.BreadcrumbsSeparator()
         <span>@product.ProductName</span>
     </div>

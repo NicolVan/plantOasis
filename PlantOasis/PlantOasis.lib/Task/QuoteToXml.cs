@@ -33,7 +33,7 @@ namespace PlantOasis.lib.Task
 
             // Create main element
             XmlElement mainNode = this.Xml.CreateElement("data");
-            mainNode.SetAttribute("popis", "export z plantoasis.sk");
+            mainNode.SetAttribute("popis", "export z plant-oasis.sk");
             mainNode.SetAttribute("kontakt", "");
             mainNode.SetAttribute("verzia", "2");
             this.Xml.AppendChild(mainNode);

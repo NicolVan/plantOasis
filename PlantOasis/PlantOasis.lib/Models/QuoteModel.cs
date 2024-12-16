@@ -796,7 +796,7 @@ namespace PlantOasis.lib.Models
             {
                 // Odoslanie uzivatelovi aj spravcovi TAKFAJN
                 Mailer.SendMailTemplate(
-                    "Vaša plantoasis.sk  objednávka",
+                    "Vaša plant-oasis.sk  objednávka",
                     msgText,
                     quote.User.QuoteEmailForNotification, pdfAttachment);
             }
@@ -804,7 +804,7 @@ namespace PlantOasis.lib.Models
             {
                 // Odoslanie iba uzivatelovi
                 Mailer.SendMailTemplateWithoutBcc(
-                    "Vaša plantoasis.sk objednávka",
+                    "Vaša plant-oasis.sk objednávka",
                     msgText,
                     quote.User.QuoteEmailForNotification, pdfAttachment);
             }

@@ -160,7 +160,7 @@ namespace PlantOasis.lib.Task
                 rectHeight = 480;
                 pdf.DrawRectangle(widthMargin, rectTop, rectWidth, rectHeight);
             }
-            pdf.CenterTextAtPosition(820, new PdfTextItem("plantoasis.sk", PdfFonts.F_NORMAL_6));
+            pdf.CenterTextAtPosition(820, new PdfTextItem("plant-oasis.sk", PdfFonts.F_NORMAL_6));
         }
         private static void OneQuoteHeaderData(PdfFile pdf, QuoteData quoteData, int pgNb)
         {
