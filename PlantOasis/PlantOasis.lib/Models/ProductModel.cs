@@ -582,6 +582,7 @@ namespace PlantOasis.lib.Models
         public Guid CustomerKey { get; set; }
 
         public ProductListModel ProductList { get; set; }
+        public bool NoResultsFound { get; internal set; }
     }
 
     public class ProductModelPriceAscComparer : IComparer<ProductModel>

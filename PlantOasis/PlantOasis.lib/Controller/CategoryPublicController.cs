@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using Umbraco.Web.Mvc;
@@ -11,86 +12,103 @@ using Umbraco.Web.Mvc;
 namespace PlantOasis.lib.Controller
 {
 
-        [PluginController("PlantOasis")]
-        public class CategoryPublicController : _BaseController
+    [PluginController("PlantOasis")]
+    public class CategoryPublicController : _BaseController
+    {
+        public ActionResult PromotedCategory(string categoryCode)
         {
-            public ActionResult PromotedCategory(string categoryCode)
-            {
-                CategoryModel model = CategoryModel.CreateCopyFrom(new CategoryRepository().GetForCategoryCode(categoryCode));
+            CategoryModel model = CategoryModel.CreateCopyFrom(new CategoryRepository().GetForCategoryCode(categoryCode));
 
-                return View(model);
-            }
+            return View(model);
+        }
 
-            public ActionResult QuickOrder(string categoryCode)
+        public ActionResult QuickOrder(string categoryCode)
+        {
+            new CategoryPublicFilterModel().SetProductView(this.CurrentSessionId, CategoryPublicFilterModel_ProductView.ProductView_List);
+
+            return Redirect(CategoryModel.CreateCopyFrom(Category.RootCategory()).Url);
+        }
+
+        public ActionResult CategoryDetail()
+        {
+            if (this.CurrentRequest.Params[CategoryPublicModel.cQuickOrderParamName] == "1")
             {
+                // Switch to list view
                 new CategoryPublicFilterModel().SetProductView(this.CurrentSessionId, CategoryPublicFilterModel_ProductView.ProductView_List);
-
-                return Redirect(CategoryModel.CreateCopyFrom(Category.RootCategory()).Url);
             }
-
-            public ActionResult CategoryDetail()
+            // Load category data
+            CategoryPublicModel model = new CategoryPublicModel(this, null);
+            // Set current category data for eshop model
+            this.SetCurrentProductCategoryModel(model);
+            // Set SEO data
+            if (model.SeoData != null)
             {
-                if (this.CurrentRequest.Params[CategoryPublicModel.cQuickOrderParamName] ==  "1")
-              {
-                   // Switch to list view
-                  new CategoryPublicFilterModel().SetProductView(this.CurrentSessionId, CategoryPublicFilterModel_ProductView.ProductView_List);
-              }
-                // Load category data
-                CategoryPublicModel model = new CategoryPublicModel(this, null);
-                // Set current category data for eshop model
-                this.SetCurrentProductCategoryModel(model);
-                // Set SEO data
-                if (model.SeoData != null)
-                {
-                    this.SetSeoModel(model.SeoData);
-                }
-                // Set eshop global data
-                model.EshopData = this.GetCurrentEshopModel();
-
-                return View(model);
+                this.SetSeoModel(model.SeoData);
             }
+            // Set eshop global data
+            model.EshopData = this.GetCurrentEshopModel();
 
-            public ActionResult GetProductsFavorite()
-            {
-                ProductSearchModel searchModel = new ProductSearchModel()
-                {
-                    CustomerKey = CustomerModel.IsUserAuthenticated() ? CustomerModel.GetCurrentCustomer().pk : Guid.Empty,
-                    Action = ProductSearchModel.ModelType.Favorite
-                };
-                CategoryPublicModel model = new CategoryPublicModel(this, searchModel);
-                // Set eshop global data
-                model.EshopData = this.GetCurrentEshopModel();
-
-                return View("CategoryDetail", model);
-            }
-
+            return View(model);
+        }
         public ActionResult GetProductsForSearch()
         {
+            string productToSearch = this.CurrentRequest.Params["srchprod"];
+            if (Regex.IsMatch(productToSearch ?? string.Empty, @"[\'\""]"))
+            {
+                ModelState.AddModelError("ProductToSearch", "Úvodzovky a apostrofy nie sú povolené.");
+                return View("CategoryDetail");
+            }
+            productToSearch = Regex.Replace(productToSearch ?? string.Empty, @"[^a-zA-Z0-9\s]", "");
+
             ProductSearchModel searchModel = new ProductSearchModel()
             {
-                //ProductToSearch = this.CurrentRequest.Params["srchprod"]
-                // Don't do any search now
-                ProductToSearch = null,
+                ProductToSearch = productToSearch,
                 Action = ProductSearchModel.ModelType.Search
             };
+
             CategoryPublicModel model = new CategoryPublicModel(this, searchModel);
-            // Set eshop global data
+
             model.EshopData = this.GetCurrentEshopModel();
 
             return View("CategoryDetail", model);
         }
 
+
         public ActionResult GetProductsSearchResult(string id)
         {
-            ProductSearchModel searchModel = new ProductSearchModel()
+            string[] forbiddenChars = { "'", "\"", "*", "%", ";", "--", " ' " };
+
+            // Skontroluj, či id nie je null
+            if (id != null)
+            {
+                foreach (var forbiddenChar in forbiddenChars)
+                {
+                    if (id.Contains(forbiddenChar))
+                    {
+                        ProductSearchModel searchModel = new ProductSearchModel()
+                        {
+                            ProductToSearch = id,
+                            Action = ProductSearchModel.ModelType.Search,
+                            NoResultsFound = true
+                        };
+                        CategoryPublicModel model = new CategoryPublicModel(this, searchModel);
+
+                        return View(model);
+                    }
+                }
+            }
+    
+
+        ProductSearchModel searchModelNormal = new ProductSearchModel()
             {
                 ProductToSearch = id,
-                Action = ProductSearchModel.ModelType.Search,
+                Action = ProductSearchModel.ModelType.Search
             };
-            CategoryPublicModel model = new CategoryPublicModel(this, searchModel);
+            CategoryPublicModel modelNormal = new CategoryPublicModel(this, searchModelNormal);
 
-            return View(model);
+            return View(modelNormal);
         }
+
         public ActionResult GetProductsDiscounted()
             {
                 CategoryPromoModel model = new CategoryPromoModel(this.CurrentSessionId, CategoryPromoModel.PromoType.Discounted);

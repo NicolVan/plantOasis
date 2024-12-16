@@ -4,6 +4,7 @@ using PlantOasis.lib.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -366,7 +367,7 @@ namespace PlantOasis.lib.Repositories
 
         Sql GetBaseQuery()
         {
-            return new Sql(string.Format("SELECT * FROM {0}", Product.DbTableName));
+            return new Sql($"SELECT * FROM {Product.DbTableName}");
         }
 
         string GetBaseWhereClause()
@@ -403,11 +404,11 @@ namespace PlantOasis.lib.Repositories
         }
         string GetProductAttributeInWhereClause(List<string> productAttributeKeyList)
         {
-            return string.Format("{0}.pk IN (SELECT {1}.pkProduct FROM {1} WHERE {1}.pkAttribute IN ({2}))", Product.DbTableName,Product2Attribute.DbTableName, GetKeysForInClause(productAttributeKeyList));
+            return string.Format("{0}.pk IN (SELECT {1}.pkProduct FROM {1} WHERE {1}.pkAttribute IN ({2}))", Product.DbTableName, Product2Attribute.DbTableName, GetKeysForInClause(productAttributeKeyList));
         }
         string GetProductAttributeWhereClause(string productAttribute)
         {
-            return string.Format("{0}.pk IN (SELECT {1}.pkProduct FROM {1} WHERE {1}.pkAttribute='{2}')", Product.DbTableName,Product2Attribute.DbTableName, productAttribute);
+            return string.Format("{0}.pk IN (SELECT {1}.pkProduct FROM {1} WHERE {1}.pkAttribute='{2}')", Product.DbTableName, Product2Attribute.DbTableName, productAttribute);
         }
         string GetSearchTextWhereClause(string searchText)
         {
@@ -458,60 +459,71 @@ namespace PlantOasis.lib.Repositories
             return sql;
         }
 
-        Sql GetProductsForSearch(string searchText)
+        public Sql GetProductsForSearch(string searchText)
         {
             var sql = new Sql();
-            sql.Append(string.Format("SELECT {0}.* FROM {0} WHERE {0}.ProductCode LIKE '%{1}%' collate Latin1_general_CI_AI OR {0}.ProductName LIKE '%{1}%' collate Latin1_general_CI_AI OR {0}.ProductDescription LIKE '%{1}%' collate Latin1_general_CI_AI OR {0}.ProductImg LIKE '%{1}%' collate Latin1_general_CI_AI ORDER BY {0}.productOrder", Product.DbTableName, searchText));
+            var query = @"
+        SELECT {0}.* 
+        FROM {0} 
+        WHERE 
+            {0}.ProductCode LIKE @SearchText COLLATE Latin1_General_CI_AI 
+            OR {0}.ProductName LIKE @SearchText COLLATE Latin1_General_CI_AI 
+            OR {0}.ProductDescription LIKE @SearchText COLLATE Latin1_General_CI_AI 
+            OR {0}.ProductImg LIKE @SearchText COLLATE Latin1_General_CI_AI
+        ORDER BY {0}.productOrder";
+            sql.Append(string.Format(query, Product.DbTableName));
+
+            var command = new SqlCommand(query);
+            command.Parameters.AddWithValue("@SearchText", "%" + searchText + "%");
 
             return sql;
         }
     }
-
-    [TableName(Product.DbTableName)]
-    [PrimaryKey("pk", AutoIncrement = false)]
-    public class Product : _BaseRepositoryRec
-    {
-        public const string DbTableName = "poProduct";
-
-        public bool ProductIsVisible { get; set; }
-        public string ProductCode { get; set; }
-        public string ProductName { get; set; }
-        public string ProductText { get; set; }
-        public string ProductDescription { get; set; }
-        public int ProductOrder { get; set; }
-        public string ProductImg { get; set; }
-
-        public string ProductUrl { get; set; }
-        public string ProductMetaTitle { get; set; }
-        public string ProductMetaKeywords { get; set; }
-        public string ProductMetaDescription { get; set; }
-
-        public Guid ProducerKey { get; set; }
-        public Guid AvailabilityKey { get; set; }
-
-        public int UnitTypeId { get; set; }
-        public bool ProductIsNew { get; set; }
-        public bool ProductIsSale { get; set; }
-        public decimal ProductUnitsInPckg { get; set; }
-        public string ProductCountry { get; set; }
-
-        public static string GetFileUploadCategory(Guid productKey)
+        [TableName(Product.DbTableName)]
+        [PrimaryKey("pk", AutoIncrement = false)]
+        public class Product : _BaseRepositoryRec
         {
-            return string.Format(@"Product/{0}", productKey);
+            public const string DbTableName = "poProduct";
+
+            public bool ProductIsVisible { get; set; }
+            public string ProductCode { get; set; }
+            public string ProductName { get; set; }
+            public string ProductText { get; set; }
+            public string ProductDescription { get; set; }
+            public int ProductOrder { get; set; }
+            public string ProductImg { get; set; }
+
+            public string ProductUrl { get; set; }
+            public string ProductMetaTitle { get; set; }
+            public string ProductMetaKeywords { get; set; }
+            public string ProductMetaDescription { get; set; }
+
+            public Guid ProducerKey { get; set; }
+            public Guid AvailabilityKey { get; set; }
+
+            public int UnitTypeId { get; set; }
+            public bool ProductIsNew { get; set; }
+            public bool ProductIsSale { get; set; }
+            public decimal ProductUnitsInPckg { get; set; }
+            public string ProductCountry { get; set; }
+
+            public static string GetFileUploadCategory(Guid productKey)
+            {
+                return string.Format(@"Product/{0}", productKey);
+            }
+        }
+
+        public class ProductFilter
+        {
+            public bool OnlyIsVisible { get; set; }
+            public string ProductCode { get; set; }
+            public string SearchText { get; set; }
+            public Guid FavoriteProductsCustomerKey { get; set; }
+            public bool? ProductIsNew { get; set; }
+
+            public List<string> ProductKeyList { get; set; }
+            public List<string> ProductCategoryKeyList { get; set; }
+            public List<string> ProducerKeyList { get; set; }
+            public List<string> ProductAttributeKeyList { get; set; }
         }
     }
-
-    public class ProductFilter
-    {
-        public bool OnlyIsVisible { get; set; }
-        public string ProductCode { get; set; }
-        public string SearchText { get; set; }
-        public Guid FavoriteProductsCustomerKey { get; set; }
-        public bool? ProductIsNew { get; set; }
-
-        public List<string> ProductKeyList { get; set; }
-        public List<string> ProductCategoryKeyList { get; set; }
-        public List<string> ProducerKeyList { get; set; }
-        public List<string> ProductAttributeKeyList { get; set; }
-    }
-}
