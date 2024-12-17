@@ -498,7 +498,6 @@
     <Content Include="App_Plugins\PlantOasis\Views\TransportType\ConfirmDeleteRecord.cshtml" />
     <Content Include="App_Plugins\PlantOasis\Views\TransportType\EditRecord.cshtml" />
     <Content Include="App_Plugins\PlantOasis\Views\TransportType\GetRecords.cshtml" />
-    <Content Include="App_Plugins\PlantOasis\Views\Product\ProductIsNew.cshtml" />
     <Content Include="App_Plugins\PlantOasis\Views\CustomerRegister\LostPassword.cshtml" />
     <None Include="packages.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

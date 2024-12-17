@@ -58,7 +58,6 @@ namespace PlantOasis.lib.Controller
 
     [PluginController("PlantOasis")]
     [Authorize(Roles = MemberRepository.PlantOasisMemberAdminRole)]
-
     public class CategoryController : _BaseCategoryController
     {
 
@@ -76,7 +75,7 @@ namespace PlantOasis.lib.Controller
 
             return View(model);
         }
-
+        [Authorize(Roles = MemberRepository.PlantOasisMemberAdminRole)]
         public ActionResult InsertRecord(string id)
         {
             CategoryModel model = GetCategoryForEdit();
@@ -87,7 +86,7 @@ namespace PlantOasis.lib.Controller
             }
             return View("EditRecord", model);
         }
-
+        [Authorize(Roles = MemberRepository.PlantOasisMemberAdminRole)]
         public ActionResult EditRecord(string id)
         {
             CategoryRepository repository = new CategoryRepository();
@@ -102,6 +101,7 @@ namespace PlantOasis.lib.Controller
         
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = MemberRepository.PlantOasisMemberAdminRole)]
         public ActionResult SaveRecord(CategoryModel model)
         {
             SetReturnToCategory(model.ParentCategoryKey, _BaseCategoryController.ReturnToTabVal_Subcateg);

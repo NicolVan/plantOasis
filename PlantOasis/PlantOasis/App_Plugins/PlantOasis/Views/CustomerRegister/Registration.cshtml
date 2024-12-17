@@ -174,7 +174,7 @@
                 </div>
                 <div class="form-item">
                     @Html.CheckBoxFor(m => m.AgreePersonalDataProfiling, new { @class = "styled" })
-                    <label for="AgreePersonalDataProfiling" class="strong"><strong>Oboznámil/a som sa so</strong> <a href="@Url.Content("~/gdpr")" target="_blank">Zásadami ochrany osobných údajov</a></label>
+                    <label for="AgreePersonalDataProfiling" class="strong"><strong>Oboznámil/a som sa so</strong> <a href="@Url.Content("~/home/gdpr")" target="_blank">Zásadami ochrany osobných údajov</a></label>
                     <div>@Html.ValidationMessageFor(m => m.AgreePersonalDataProfiling)</div>
                 </div>
             </div>
