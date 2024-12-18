@@ -2605,6 +2605,7 @@
     <Content Include="Styles\images\arrow-left.png" />
     <Content Include="Styles\images\arrow-right.png" />
     <Content Include="Styles\images\arrow-up.png" />
+    <Content Include="Styles\images\blog-facebook.png" />
     <Content Include="Styles\images\bonsai.png" />
     <Content Include="Styles\images\caret-left.png" />
     <Content Include="Styles\images\caret-right.png" />
@@ -2617,6 +2618,7 @@
     <Content Include="Styles\images\izbove rastliny.png" />
     <Content Include="Styles\images\lightslider-controls.png" />
     <Content Include="Styles\images\Logo1.png" />
+    <Content Include="Styles\images\Logo3.png" />
     <Content Include="Styles\images\masozrave rastliny.png" />
     <Content Include="Styles\images\pastel-4279379_1280.jpg" />
     <Content Include="Styles\images\plant-1842299_1280.jpg" />
