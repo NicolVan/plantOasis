@@ -1,0 +1,16 @@
+﻿@inherits UmbracoViewPage
+
+@{
+    var categoryList = Umbraco.Content(4279);
+}
+<div class="blog-categories">
+    <div class="bc-title">
+        <h2>Kategórie</h2></div>
+    <ul class="bc-menu">
+        <li><a href="@Url.Content("~/home/blog")">Všetky články</a></li>
+        @foreach (var child in categoryList.Children)
+        {
+            <li><a href="@child.Url">@child.Value("pageTitle")</a></li>
+        }
+    </ul>
+</div>

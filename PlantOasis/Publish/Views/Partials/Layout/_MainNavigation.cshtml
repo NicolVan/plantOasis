@@ -45,37 +45,36 @@
                         if (category.HasChildren)
                         {
                             string menuid = Guid.NewGuid().ToString();
-                            <li class="dropdown">
-                                <a class="mobile-submenu-parent" href="@category.Url">@category.CategoryName</a>
-                                <a class="mobile-submenu-caret" href="#@menuid" data-toggle="collapse" aria-expanded="true"><i class="fa fa-caret-down fa-fw"></i></a>
-                                <ul class="dropdown-menu desktop-only">
-                                    @foreach (CategoryModel child in category.Children)
-                                    {
-                                        if (child.CategoryIsVisible)
-                                        {
-                                            <li><a href="@child.Url">@child.CategoryName</a></li>
-                                        }
-                                    }
-                                </ul>
-                                <ul id="@menuid" class="mobile-submenu mobile-only collapse" aria-expanded="false">
-                                    @foreach (CategoryModel child in category.Children)
-                                    {
-                                        if (child.CategoryIsVisible)
-                                        {
-                                            <li><a href="@child.Url">@child.CategoryName</a></li>
-                                        }
-                                    }
-                                </ul>
-                            </li>
-                        }
-                        else
+            <li class="dropdown">
+                <a class="mobile-submenu-parent" href="@category.Url">@category.CategoryName</a>
+                <a class="mobile-submenu-caret" href="#@menuid" data-toggle="collapse" aria-expanded="true"><i class="fa fa-caret-down fa-fw"></i></a>
+                <ul class="dropdown-menu desktop-only">
+                    @foreach (CategoryModel child in category.Children)
+                    {
+                        if (child.CategoryIsVisible)
                         {
-                            <li>
-                                <a href="@category.Url">@category.CategoryName</a>
-                            </li>
+            <li><a href="@child.Url">@child.CategoryName</a></li>}
+                                    }
+                </ul>
+                <ul id="@menuid" class="mobile-submenu mobile-only collapse" aria-expanded="false">
+                    @foreach (CategoryModel child in category.Children)
+                    {
+                        if (child.CategoryIsVisible)
+                        {
+            <li><a href="@child.Url">@child.CategoryName</a></li>}
+                                    }
+                </ul>
+            </li> }
+                                else
+                                {
+            <li>
+                <a href="@category.Url">@category.CategoryName</a>
+            </li>}
+                            }
                         }
-                    }
-                }
+                <li>
+                    <a href="@Url.Content("~/home/blog")">Blog</a>
+                </li>
                 <li>
                     <a href="@Url.Content("~/home/kosik")"><i class="fa fa-fw fa-shopping-cart"></i><span class="header-basket-pcs">0</span></a>
                 </li>

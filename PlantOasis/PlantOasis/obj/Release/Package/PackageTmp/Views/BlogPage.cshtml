@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+    Layout = "layoutBlog.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            @Html.Partial("Blog/_BlogCategories")
+        </div>
+        <div class="col-md-9">
+            <div class="blog-intro">
+                <h1>
+                    Vitajte na našom blogu.
+                </h1>
+            </div>
+            <div class="blog-article-list">
+                @Html.Partial("Blog/_BlogArticleList")
+            </div>
+        </div>
+    </div>
+</div>

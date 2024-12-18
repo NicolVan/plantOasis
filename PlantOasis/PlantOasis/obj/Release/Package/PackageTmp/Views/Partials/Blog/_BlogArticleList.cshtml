@@ -1,0 +1,68 @@
+﻿@inherits UmbracoViewPage
+
+@{
+    // Get all articles
+    List<IPublishedContent> articleList = Umbraco.Content(4276).ChildrenOfType("blogArticle").ToList();
+    // Get only valid articles
+    int categoryId = Model.IsDocumentType("blogCategory") ? Model.Id : 0;
+    List<IPublishedContent> tmpList = new List<IPublishedContent>(articleList.Count + 1);
+    foreach (IPublishedContent tmp in articleList)
+    {
+        if (categoryId > 0)
+        {
+            // Display article sonly for selected category
+            bool isValidForCategory = false;
+            IEnumerable<IPublishedContent> articleCategories = (IEnumerable<IPublishedContent>)tmp.Value("articleCategories");
+            foreach (var articleCategory in articleCategories)
+            {
+                if (articleCategory.Id == categoryId)
+                {
+                    isValidForCategory = true;
+                    break;
+                }
+            }
+            if (!isValidForCategory)
+            {
+                // Article is not valid for selected category
+                continue;
+            }
+        }
+        tmpList.Add(tmp);
+    }
+    articleList = tmpList;
+}
+
+
+@for (int idx = articleList.Count - 1; idx >= 0; idx--)
+{
+    IPublishedContent child = articleList[idx];
+    if ((bool)child.Value("umbracoNaviHide"))
+    {
+        continue;
+    }
+
+    IPublishedContent img = child.Value("articlePreviewImage") as IPublishedContent;
+    string imgUrl = img != null ? img.Url : null;
+
+    <div class="blog-article-preview">
+        <a href="@child.Url">
+            <div class="row">
+                <div class="col-md-3">
+                    @if (!string.IsNullOrEmpty(imgUrl))
+                    {
+                        <div class="bap-image">
+                            <img src="@imgUrl" />
+                        </div>
+                    }
+                </div>
+                    <div class="bap-title">
+                        <h2>@child.Value("pageTitle")</h2>
+                    </div>
+                    <div class="bap-text">
+                        <p>
+                            @child.Value("articlePreviewText")
+                </div>
+            </div>
+        </a>
+    </div>
+}
