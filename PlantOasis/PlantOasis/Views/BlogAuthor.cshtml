@@ -1,0 +1,41 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@using PlantOasis.lib.Util
+@using PlantOasis.lib.Controller
+
+@{
+    Layout = "layoutBlog.cshtml";
+
+    IPublishedContent img = Model.Value("authorImage") as IPublishedContent;
+    string imgUrl = img != null ? img.Url : null;
+
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="blog-author-detail">
+                <div class="bad-name">
+                    <h1>@Model.Value("pageTitle")</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="bad-image">
+                            @if (!string.IsNullOrEmpty(imgUrl))
+                            {
+                                <img class="img-responsive" src="@imgUrl" alt="@Model.Value("pageTitle")" />
+                            }
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="bad-description">
+                            @Html.Raw(Model.Value("authorDescription"))
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            @Html.Partial("Blog/_BlogCategories")
+        </div>
+    </div>
+</div>

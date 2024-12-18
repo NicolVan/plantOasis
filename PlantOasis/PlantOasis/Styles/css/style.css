@@ -10,7 +10,10 @@ width:25px;
     white-space: nowrap;
     animation: moveAcross 15s linear infinite;
 }
-
+.blog-page-body {
+    min-height: 100vh;
+    margin-top:200px;
+}
 @keyframes moveAcross {
     0% {
         left: -100%;

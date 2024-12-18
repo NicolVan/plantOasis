@@ -4670,6 +4670,15 @@
     <Content Include="Views\MacroPartials\protQuotesItemsInsert.cshtml" />
     <Content Include="Views\MacroPartials\MyOrderDetail.cshtml" />
     <Content Include="Views\MacroPartials\MyProfile.cshtml" />
+    <Content Include="Views\Partials\Blog\_BlogArticleList.cshtml" />
+    <Content Include="Views\Partials\Blog\_BlogCategories.cshtml" />
+    <Content Include="Views\Partials\Blog\_BlogFooter.cshtml" />
+    <Content Include="Views\Partials\Blog\_BlogHeader.cshtml" />
+    <Content Include="Views\BlogArticle.cshtml" />
+    <Content Include="Views\BlogAuthor.cshtml" />
+    <Content Include="Views\BlogCategory.cshtml" />
+    <Content Include="Views\BlogPage.cshtml" />
+    <Content Include="Views\layoutBlog.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
