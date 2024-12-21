@@ -13,7 +13,7 @@
 
     IPublishedContent author = Model.Value("articleAuthor") as IPublishedContent;
 
-    Html.RegisterScript(MvcHtmlString.Create("<meta property=\"og:site_name\" content=\"vyroba-webovych-stranok.sk\" />\n"));
+    Html.RegisterScript(MvcHtmlString.Create("<meta property=\"og:site_name\" content=\"plant-oasis.sk\" />\n"));
     Html.RegisterScript(MvcHtmlString.Create("<meta property=\"og:type\" content=\"article\" />\n"));
     Html.RegisterScript(MvcHtmlString.Create(string.Format("<meta property=\"og:url\" content=\"{0}\" />\n", articleUrl)));
     Html.RegisterScript(MvcHtmlString.Create(string.Format("<meta property=\"og:title\" content=\"{0}\" />\n", Model.Value("pageTitle"))));
