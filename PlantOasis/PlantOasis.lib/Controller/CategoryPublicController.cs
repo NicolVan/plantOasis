@@ -50,6 +50,19 @@ namespace PlantOasis.lib.Controller
 
             return View(model);
         }
+        public ActionResult GetProductsFavorite()
+        {
+            ProductSearchModel searchModel = new ProductSearchModel()
+            {
+                CustomerKey = CustomerModel.IsUserAuthenticated() ? CustomerModel.GetCurrentCustomer().pk : Guid.Empty,
+                Action = ProductSearchModel.ModelType.Favorite
+            };
+            CategoryPublicModel model = new CategoryPublicModel(this, searchModel);
+            // Set eshop global data
+            model.EshopData = this.GetCurrentEshopModel();
+
+            return View("CategoryDetail", model);
+        }
         public ActionResult GetProductsForSearch()
         {
             string productToSearch = this.CurrentRequest.Params["srchprod"];
