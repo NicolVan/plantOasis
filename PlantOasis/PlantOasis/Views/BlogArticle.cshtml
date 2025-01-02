@@ -52,6 +52,14 @@
         <div class="col-md-9">
             <div class="blog-article">
                 <div class="row">
+                    <div class="col-md-3">
+                        @if (!string.IsNullOrEmpty(imgUrl))
+                        {
+                            <div class="ba-image">
+                                <img src="@imgUrl" />
+                            </div>
+                        }
+                    </div>
                     <div class="col-md-6">
                         <div class="ba-title">
                             <h1>
@@ -62,31 +70,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        @if (!string.IsNullOrEmpty(imgUrl))
-                        {
-                            <div class="ba-image">
-                                <img src="@imgUrl" />
-                            </div>
-                        }
-                    </div>
                 </div>
             </div>
 
             <div class="blog-article-footer">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="blog-social-plugins">
-                            <p><strong>Zaujal vás tento článok? Dajte vedieť aj vašim známym.</strong></p>
-                            <div class="fb-share-button" data-href="@articleUrl" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" href="@fbShareUrl" target="_blank">Zdieľať</a></div>
-                            <div class="social-follow">
-                                <p>Sledujte naše sociálne siete.</p>
-                                <p>
-                                    <a href="https://www.facebook.com/ved.nik.vies/" target="_blank"><img src="@Url.Content("~/Styles/images/blog-facebook.png")" alt="Facebook" /></a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-md-6">
                         @if (author != null)
                         {
@@ -96,6 +84,21 @@
                                 <a href="@author.Url">@author.Value("pageTitle")</a>
                             </div>
                         }
+                        <div class="blog-social-plugins">
+                            <p><strong>Zaujal vás tento článok? Dajte vedieť aj vašim známym.</strong></p>
+                            <div>
+                                <a href="@fbShareUrl" target="_blank" class="btn btn-primary d-inline-flex align-items-center">
+                                    <i class="fas fa-share-alt me-2"></i>
+                                    Zdieľať
+                                </a>
+                            </div>
+                            <div class="social-follow">
+                                <p>Sledujte naše sociálne siete.</p>
+                                <p>
+                                    <a href="https://www.facebook.com/ved.nik.vies/" target="_blank"><img src="@Url.Content("~/Styles/images/blog-facebook.png")" alt="Facebook" /></a>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -12,9 +12,7 @@
                     @for (int idx = 0; idx < Model.Products.Count; idx++)
                     {
                     <div class="col-md-3">
-                        <div class="product">
                             @Html.Partial("ProductPublic/ProductItem_Img", new ProductSessionModel(Model.Products[idx], Model.SessionId))
-                        </div>
                         </div>
                         }
                     </div>

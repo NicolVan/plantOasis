@@ -3,11 +3,8 @@
 @using PlantOasis.lib.Repositories
 @using PlantOasis.lib.Util
 
-
-@if (this.Model.ProductData == null)
+@if (Model.ProductData == null)
 {
-    Console.WriteLine("Failed to create ProductData from product.");
-
     <div class="message-div">
         <h1>Produkt nenájdený</h1>
         <p>
@@ -23,34 +20,34 @@ else
 
     if (Model.ProductCategory != null)
     {
-    <div class="breadcrumbs">
-        <a href="@Url.Content("~/")">plant-oasis.sk</a>
-        @if (Model.ProductCategory.Parents != null)
-        {
-            if (Model.ProductCategory.Parents.Count > 0)
+        <div class="breadcrumbs">
+            <a href="@Url.Content("~/")">plant-oasis.sk</a>
+            @if (Model.ProductCategory.Parents != null)
             {
-                @HtmlUtil.BreadcrumbsSeparator()
-                <a href="@rootCategory.Url">Všetky produkty</a>
-            }
-            for (int i = Model.ProductCategory.Parents.Count - 1; i >= 0; i--)
-            {
-                CategoryModel parent = Model.ProductCategory.Parents[i];
+                if (Model.ProductCategory.Parents.Count > 0)
+                {
+                    @HtmlUtil.BreadcrumbsSeparator()
+                    <a href="@rootCategory.Url">Všetky produkty</a>
+                }
+                for (int i = Model.ProductCategory.Parents.Count - 1; i >= 0; i--)
+                {
+                    CategoryModel parent = Model.ProductCategory.Parents[i];
 
-                @HtmlUtil.BreadcrumbsSeparator()
-                <a href="@parent.Url">@parent.CategoryName</a>
+                    @HtmlUtil.BreadcrumbsSeparator()
+                    <a href="@parent.Url">@parent.CategoryName</a>
+                }
             }
-        }
-        @HtmlUtil.BreadcrumbsSeparator()
-        <span>@product.ProductName</span>
-    </div>
+            @HtmlUtil.BreadcrumbsSeparator()
+            <span>@product.ProductName</span>
+        </div>
     }
     else
     {
-    <div class="breadcrumbs">
-        <a href="@Url.Content("~/")"plant-oasis.sk</a>
-        @HtmlUtil.BreadcrumbsSeparator()
-        <span>@product.ProductName</span>
-    </div>
+        <div class="breadcrumbs">
+            <a href="@Url.Content("~/")">plant-oasis.sk</a>
+            @HtmlUtil.BreadcrumbsSeparator()
+            <span>@product.ProductName</span>
+        </div>
     }
 
     <div class="ec-product-detail">
@@ -80,10 +77,6 @@ else
                 </div>
                 <div class="col-md-8">
                     <div class="title"><h1>@product.ProductName</h1></div>
-                    <div class="product-text">
-                        @Html.Raw(Model.ProductData.ProductText)
-                    </div>
-                    &nbsp;
                     <div class="product-description">
                         <div>
                             @Html.Raw(Model.ProductData.ProductDescription)
@@ -122,4 +115,3 @@ else
 
     @Html.Partial("ProductDetailRelatedProducts")
 }
-

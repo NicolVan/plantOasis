@@ -1,0 +1,3 @@
+Sitemap: https://www.plant-oasis.sk/home/sitemap
+User-agent: *
+Disallow:

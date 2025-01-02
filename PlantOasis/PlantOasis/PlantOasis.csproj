@@ -374,6 +374,7 @@
     <Content Include="config\logviewer.searches.config.js" />
     <Content Include="config\splashes\noNodes.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="robots.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\chosen.jquery.js" />
@@ -4681,6 +4682,7 @@
     <Content Include="Views\BlogCategory.cshtml" />
     <Content Include="Views\BlogPage.cshtml" />
     <Content Include="Views\layoutBlog.cshtml" />
+    <Content Include="Views\Sitemap.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -4697,6 +4699,9 @@
       <Project>{84a13de0-9e1c-49dd-afb4-b11d55bc86bd}</Project>
       <Name>PlantOasis.lib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

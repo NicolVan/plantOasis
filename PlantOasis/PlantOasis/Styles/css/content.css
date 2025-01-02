@@ -543,8 +543,8 @@ h1, h2, h3, h4, h4 {
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .home-stred img {
         flex-direction: row;
-        padding: 10px;
-        max-width: 100%;
+      
+        max-width: 80%;
     }
     .home-stred {
     margin-left:0;
@@ -1052,7 +1052,7 @@ h1, h2, h3, h4, h4 {
 
     /* Slider */
     .slider {
-        position: relative;
+        position: absolute;
         overflow: hidden;
         margin: 20px auto 0 auto;
     }

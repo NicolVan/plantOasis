@@ -25,13 +25,16 @@
                 <div class="tool-item">
                     <a href="@Url.Content("~/home/zakaznicka-sekcia")"><i class="fa fa-fw fa-user"></i></a>
                 </div>
+                <div class="tool-item">
+                    <a href="@Url.Content("~/home/registracia")"><i class="fa fa-fw fa-user-plus"></i></a>
+                </div>
             </div>
             </div>
         <div id="navbar" class="collapse navbar-collapse custom-navbar">
-            <a href="@Url.Content("~/")">
-                <img class="logo" src="@Url.Content("~/Styles/images/Logo1.png")" />
-            </a>
             <ul class="nav navbar-nav d-flex align-items-center">
+                <li  class="logo" href="@Url.Content("~/")">
+                    <img class="logo" src="@Url.Content("~/Styles/images/Logo1.png")" />
+                </li>
                 <li class="desktop-only"><a href="@Url.Content("~/")" title="Úvod"><i class="fa fa-home"></i></a></li>
                 <li class="desktop-only"><a href="@ConfigurationUtil.EshopRootUrl" title="Vyhľadať produkt" class="menu-item-search"><i class="fa fa-search"></i></a></li>
                 <li class="desktop-only"><a href="@ConfigurationUtil.EshopRootUrl" title="Všetky produkty"><i class="fa fa-store-alt"></i></a></li>
@@ -45,37 +48,37 @@
                         if (category.HasChildren)
                         {
                             string menuid = Guid.NewGuid().ToString();
-            <li class="dropdown">
-                <a class="mobile-submenu-parent" href="@category.Url">@category.CategoryName</a>
-                <a class="mobile-submenu-caret" href="#@menuid" data-toggle="collapse" aria-expanded="true"><i class="fa fa-caret-down fa-fw"></i></a>
-                <ul class="dropdown-menu desktop-only">
-                    @foreach (CategoryModel child in category.Children)
-                    {
-                        if (child.CategoryIsVisible)
+                            <li class="dropdown">
+                                <a class="mobile-submenu-parent" href="@category.Url">@category.CategoryName</a>
+                                <a class="mobile-submenu-caret" href="#@menuid" data-toggle="collapse" aria-expanded="true"><i class="fa fa-caret-down fa-fw"></i></a>
+                                <ul class="dropdown-menu desktop-only">
+                                    @foreach (CategoryModel child in category.Children)
+                                    {
+                                        if (child.CategoryIsVisible)
+                                        {
+                                            <li><a href="@child.Url">@child.CategoryName</a></li>
+                                        }
+                                    }
+                                </ul>
+                                <ul id="@menuid" class="mobile-submenu mobile-only collapse" aria-expanded="false">
+                                    @foreach (CategoryModel child in category.Children)
+                                    {
+                                        if (child.CategoryIsVisible)
+                                        {
+                                            <li><a href="@child.Url">@child.CategoryName</a></li>
+                                        }
+                                    }
+                                </ul>
+                            </li>
+                        }
+                        else
                         {
-            <li><a href="@child.Url">@child.CategoryName</a></li>
-}
-    }
-                </ul>
-                <ul id="@menuid" class="mobile-submenu mobile-only collapse" aria-expanded="false">
-                    @foreach (CategoryModel child in category.Children)
-                    {
-                        if (child.CategoryIsVisible)
-                        {
-            <li><a href="@child.Url">@child.CategoryName</a></li>
-}
-    }
-                </ul>
-            </li>
- }
-        else
-        {
-            <li>
-                <a href="@category.Url">@category.CategoryName</a>
-            </li>
-}
-    }
-}
+                            <li>
+                                <a href="@category.Url">@category.CategoryName</a>
+                            </li>
+                        }
+                    }
+                }
                 <li>
                     <a href="@Url.Content("~/home/blog")">Blog</a>
                 </li>
@@ -83,11 +86,11 @@
                     <a href="@Url.Content("~/home/kontakt")">Kontakt</a>
                 </li>
 
-                <li>
+                <li class="desktop-only">
                     <a href="@Url.Content("~/home/kosik")"><i class="fa fa-fw fa-shopping-cart"></i><span class="header-basket-pcs">0</span></a>
                 </li>
-                <li> <a href="@Url.Content("~/home/zakaznicka-sekcia")"><i class="fa fa-fw fa-user"></i></a></li>
-                <li> <a href="@Url.Content("~/home/registracia")"><i class="fa fa-fw fa-user-plus"></i></a></li>
+                <li class="desktop-only"> <a href="@Url.Content("~/home/zakaznicka-sekcia")"><i class="fa fa-fw fa-user"></i></a></li>
+                <li class="desktop-only"> <a href="@Url.Content("~/home/registracia")"><i class="fa fa-fw fa-user-plus"></i></a></li>
             </ul>
         </div>
       </div>
