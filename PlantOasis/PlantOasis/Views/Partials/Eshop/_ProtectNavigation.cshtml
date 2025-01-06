@@ -54,10 +54,6 @@
                 }
                 @if (System.Web.Security.Roles.IsUserInRole(user.UserName, MemberRepository.PlantOasisMemberCustomerRole))
                 {
-                    if (addSeparator)
-                    {
-                        <div class="separator"></div>
-                    }
                     <ul class="customer-menu">
                         <li><a href="@Url.Content("~/home/zakaznicka-sekcia/moje-heslo")">Zmena hesla</a></li>
                         <li><a href="@Url.Content("~/home/zakaznicka-sekcia/moje-osobne-udaje")">Moje osobné údaje</a></li>
